@@ -1,0 +1,213 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2012.8.5)  28 MAY 2015 20:25
+entering extended mode
+**C:/Users/Admin/Documents/GitHub/PhD/Chapter*2/layerdependence.tex
+("C:/Users/Admin/Documents/GitHub/PhD/Chapter 2/layerdependence.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\elsarticle\elsarticle.cls"
+Document Class: elsarticle 2009/09/17, 1.2.0: Elsevier Ltd
+\@bls=\dimen102
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen103
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvips.def"
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\pifont.sty"
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\upzd.fd"
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\upsy.fd"
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+\c@tnote=\count87
+\c@fnote=\count88
+\c@cnote=\count89
+\c@ead=\count90
+\c@author=\count91
+\@eadauthor=\toks15
+\c@affn=\count92
+\absbox=\box26
+\keybox=\box27
+\Columnwidth=\dimen106
+\space@left=\dimen107
+\els@boxa=\box28
+\els@boxb=\box29
+\leftMargin=\dimen108
+\@enLab=\toks16
+\@sep=\skip43
+\@@sep=\skip44
+
+("C:\Users\Admin\Documents\GitHub\PhD\Chapter 2\layerdependence.spl")
+("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip45
+\bibsep=\skip46
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count93
+)
+\splwrite=\write3
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks17
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen109
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\comment\comment.sty"
+\CommentStream=\write4
+
+Excluding comment 'comment')
+("C:\Users\Admin\Documents\GitHub\PhD\Chapter 2\layerdependence.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Try loading font information for U+msa on input line 103.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 103.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+) [1
+
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 134.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 134.
+ [2]
+File: layer.eps Graphic file (type eps)
+ <layer.eps>
+[3] [4]
+File: normal.eps Graphic file (type eps)
+ <normal.eps>
+File: student.eps Graphic file (type eps)
+ <student.eps>
+File: structural2.eps Graphic file (type eps)
+ <structural2.eps>
+File: gumbel.eps Graphic file (type eps)
+ <gumbel.eps>
+File: structural1.eps Graphic file (type eps)
+
+<structural1.eps>
+File: clayton.eps Graphic file (type eps)
+ <clayton.eps>
+File: frank.eps Graphic file (type eps)
+ <frank.eps>
+File: structural3.eps Graphic file (type eps)
+ <structural3.eps>
+File: structural4.eps Graphic file (type eps)
+
+<structural4.eps>
+Overfull \hbox (15.08218pt too wide) in paragraph at lines 275--286
+ [][] 
+ []
+
+[5] [6]
+File: perfect.eps Graphic file (type eps)
+ <perfect.eps>
+File: imperf.eps Graphic file (type eps)
+ <imperf.eps>
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 318--322
+ [][] 
+ []
+
+
+Overfull \hbox (1.96776pt too wide) in paragraph at lines 395--397
+[][]\OT1/cmr/m/n/10 Layer de-pen-dence $\OML/cmm/m/it/10 `[]$ \OT1/cmr/m/n/10 s
+at-is-fies the fol-low-ing five ``co-her-ence" prop-er-ties. These
+ []
+
+[7] [8] [9] [10] [11] [12] [13]
+File: weights.eps Graphic file (type eps)
+ <weights.eps>
+File: alternate.eps Graphic file (type eps)
+ <alternate.eps>
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 739--743
+ [][] 
+ []
+
+[14] [15] [16] [17] [18]
+("C:\Users\Admin\Documents\GitHub\PhD\Chapter 2\layerdependence.bbl" [19])
+[20] ("C:\Users\Admin\Documents\GitHub\PhD\Chapter 2\layerdependence.aux") ) 
+Here is how much of TeX's memory you used:
+ 1449 strings out of 493922
+ 18318 string characters out of 3147306
+ 74648 words of memory out of 3000000
+ 4728 multiletter control sequences out of 15000+200000
+ 10950 words of font info for 42 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 32i,10n,34p,1318b,385s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on layerdependence.dvi (20 pages, 82956 bytes).

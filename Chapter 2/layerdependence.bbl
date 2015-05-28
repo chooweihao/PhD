@@ -1,0 +1,134 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Bairamov, Kotz, and Kozubowski}{Bairamov
+  et~al.}{2003}]{bairamov2003new}
+Bairamov, I., S.~Kotz, and T.~Kozubowski (2003).
+\newblock A new measure of linear local dependence.
+\newblock {\em Statistics: A Journal of Theoretical and Applied
+  Statistics\/}~{\em 37\/}(3), 243--258.
+
+\bibitem[\protect\citeauthoryear{Bjerve and Doksum}{Bjerve and
+  Doksum}{1993}]{bjerve1993correlation}
+Bjerve, S. and K.~Doksum (1993).
+\newblock Correlation curves: Measures of association as functions of covariate
+  values.
+\newblock {\em The Annals of Statistics\/}, 890--902.
+
+\bibitem[\protect\citeauthoryear{Bouy{\'e}, Durrleman, Nikeghbali, Riboulet,
+  and Roncalli}{Bouy{\'e} et~al.}{2000}]{bouye2000copulas}
+Bouy{\'e}, E., V.~Durrleman, A.~Nikeghbali, G.~Riboulet, and T.~Roncalli
+  (2000).
+\newblock Copulas for finance-a reading guide and some applications.
+\newblock {\em Available at SSRN 1032533\/}.
+
+\bibitem[\protect\citeauthoryear{Czado}{Czado}{2010}]{czado2010pair}
+Czado, C. (2010).
+\newblock Pair-copula constructions of multivariate copulas.
+\newblock In {\em Copula theory and its applications}, pp.\  93--109. Springer.
+
+\bibitem[\protect\citeauthoryear{Denuit, Dhaene, Goovaerts, and Kaas}{Denuit
+  et~al.}{2005}]{denuitactuarial}
+Denuit, M., J.~Dhaene, M.~Goovaerts, and R.~Kaas (2005).
+\newblock Actuarial theory for dependent risks: Measures, orders and models.
+\newblock {\em John Wiley\&Sons\/}.
+
+\bibitem[\protect\citeauthoryear{Dhaene, Denuit, and Vanduffel}{Dhaene
+  et~al.}{2009}]{dhaene2009correlation}
+Dhaene, J., M.~Denuit, and S.~Vanduffel (2009).
+\newblock Correlation order, merging and diversification.
+\newblock {\em Insurance: Mathematics and Economics\/}~{\em 45\/}(3), 325--332.
+
+\bibitem[\protect\citeauthoryear{Durante, Fern{\'a}ndez-S{\'a}nchez, and
+  Pappad{\`a}}{Durante et~al.}{2014}]{durante2014copulas}
+Durante, F., J.~Fern{\'a}ndez-S{\'a}nchez, and R.~Pappad{\`a} (2014).
+\newblock Copulas, diagonals, and tail dependence.
+\newblock {\em Fuzzy Sets and Systems\/}.
+
+\bibitem[\protect\citeauthoryear{Embrechts, McNeil, and Straumann}{Embrechts
+  et~al.}{2002}]{embrechts2002correlation}
+Embrechts, P., A.~McNeil, and D.~Straumann (2002).
+\newblock Correlation and dependence in risk management: properties and
+  pitfalls.
+\newblock {\em Risk management: value at risk and beyond\/}, 176--223.
+
+\bibitem[\protect\citeauthoryear{Genest and Rivest}{Genest and
+  Rivest}{1993}]{genest1993statistical}
+Genest, C. and L.-P. Rivest (1993).
+\newblock Statistical inference procedures for bivariate archimedean copulas.
+\newblock {\em Journal of the American statistical Association\/}~{\em
+  88\/}(423), 1034--1043.
+
+\bibitem[\protect\citeauthoryear{Holland and Wang}{Holland and
+  Wang}{1987}]{holland1987dependence}
+Holland, P.~W. and Y.~J. Wang (1987).
+\newblock Dependence function for continuous bivariate densities.
+\newblock {\em Communications in Statistics-Theory and Methods\/}~{\em
+  16\/}(3), 863--876.
+
+\bibitem[\protect\citeauthoryear{Joe}{Joe}{1997}]{joe1997multivariate}
+Joe, H. (1997).
+\newblock {\em Multivariate models and dependence concepts}, Volume~73.
+\newblock CRC Press.
+
+\bibitem[\protect\citeauthoryear{Jones}{Jones}{1996}]{jones1996local}
+Jones, M. (1996).
+\newblock The local dependence function.
+\newblock {\em Biometrika\/}~{\em 83\/}(4), 899--904.
+
+\bibitem[\protect\citeauthoryear{Kojadinovic and Yan}{Kojadinovic and
+  Yan}{2010}]{kojadinovic2010comparison}
+Kojadinovic, I. and J.~Yan (2010).
+\newblock Comparison of three semiparametric methods for estimating dependence
+  parameters in copula models.
+\newblock {\em Insurance: Mathematics and Economics\/}~{\em 47\/}(1), 52--63.
+
+\bibitem[\protect\citeauthoryear{Mandel, Morgan, and Wei}{Mandel
+  et~al.}{2012}]{mandel2012role}
+Mandel, B., D.~Morgan, and C.~Wei (2012).
+\newblock The role of bank credit enhancements in securitization.
+\newblock {\em Federal Reserve Bank of New York Economic Policy Review\/}~{\em
+  18\/}(2), 35--46.
+
+\bibitem[\protect\citeauthoryear{McNeil, Frey, and Embrechts}{McNeil
+  et~al.}{2005}]{mcneil2005qrm}
+McNeil, A., R.~Frey, and P.~Embrechts (2005).
+\newblock {\em {Quantitative risk management}}.
+\newblock Princeton University Press.
+
+\bibitem[\protect\citeauthoryear{Nelson}{Nelson}{1999}]{nelson1999ic}
+Nelson, R. (1999).
+\newblock {An Introduction to Copulas}.
+\newblock {\em Lecture Notes in Statistics\/}~{\em 139}.
+
+\bibitem[\protect\citeauthoryear{Oakes}{Oakes}{1989}]{oakes1989bivariate}
+Oakes, D. (1989).
+\newblock Bivariate survival models induced by frailties.
+\newblock {\em Journal of the American Statistical Association\/}~{\em
+  84\/}(406), 487--493.
+
+\bibitem[\protect\citeauthoryear{Schechtman and Yitzhaki}{Schechtman and
+  Yitzhaki}{1999}]{schechtman1999proper}
+Schechtman, E. and S.~Yitzhaki (1999).
+\newblock On the proper bounds of the gini correlation.
+\newblock {\em Economics letters\/}~{\em 63\/}(2), 133--138.
+
+\bibitem[\protect\citeauthoryear{Sweeting and Fotiou}{Sweeting and
+  Fotiou}{2013}]{sweeting2013calculating}
+Sweeting, P. and F.~Fotiou (2013).
+\newblock Calculating and communicating tail association and the risk of
+  extreme loss.
+\newblock {\em British Actuarial Journal\/}~{\em 18\/}(01), 13--72.
+
+\bibitem[\protect\citeauthoryear{Venter}{Venter}{2002}]{venter2002tails}
+Venter, G.~G. (2002).
+\newblock Tails of copulas.
+\newblock In {\em Proceedings of the Casualty Actuarial Society}, Volume~89,
+  pp.\  68--113.
+
+\bibitem[\protect\citeauthoryear{Wang}{Wang}{1995}]{wang1995insurance}
+Wang, S. (1995).
+\newblock Insurance pricing and increased limits ratemaking by proportional
+  hazards transforms.
+\newblock {\em Insurance: Mathematics and Economics\/}~{\em 17\/}(1), 43--54.
+
+\end{thebibliography}
