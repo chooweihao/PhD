@@ -75,16 +75,6 @@
 \begin{frontmatter}
 
 \title{Mean and risk densities and their applications to risk management}
-\author[acst]{Weihao Choo\corref{cor1}}
-\ead{weihao.choo@mq.edu.au}
-\author[acst]{Piet de Jong}
-
-
-
-\address[acst]{Department of Actuarial Studies Macquarie
-University, NSW 2109, Australia.}
-\cortext[cor1]{Corresponding author}
-
 
 
 
@@ -568,7 +558,7 @@ The following calculates mean and risk densities from NASDAQ, S\&P and FTSE dail
 
 \i NASDAQ has more skewed losses and gains than S\&P and FTSE, and in particular larger VaR--spacings. As a result NASDAQ has larger mean and risk densities, and larger mean loss and risk overall. S\&P and FTSE behave similarly particularly in the tails.
 
-\i Empirical mean densities are large at low VaR--layers, then decrease rapidly at higher VaR--layers. High mean density values at low layers are formed by large VaR--spacings in left tails of loss distributions. 
+\i Empirical mean densities are large at low VaR--layers, then decrease rapidly at higher VaR--layers. High mean density values at low layers are formed by large VaR--spacings in left tails of loss distributions.
 
 \i Relatively stable mean densities at higher VaR--layers indicate upper tails of loss distributions have similar shape as the exponential distribution.
 
@@ -670,7 +660,7 @@ $$
 $$
 where as before $V_\pi'$ is the derivative of $V_\pi$ with respect to $\pi$ and $r_\pi^*=r_\pi/m_\pi$ is the risk ratio of the $V_\pi$--layer of $x$. Hence PEL is a weighted average of default probabilities $1-\pi$ from $\pi=\alpha$ to $\beta$, where weights are VaR derivatives or spacings. Setting $\beta \rightarrow\alpha$ leads to PEL$\rightarrow 1-\alpha$ which is the PD. RR is a weighted average of risk ratios from $\alpha$ to $\beta$. Note PEL in this case is also the rate-on-line in excess-of-loss reinsurance ignoring the risk loading.
 
-Both PD and PEL on tranche $[V_\alpha,V_\beta]$ decrease as $\alpha$ or $\beta$ increases. Hence the probability and expected proportion of default are smaller for higher tranches, consistent with common knowledge. However RR increases since $r_\pi^*$ is increasing in $\pi$. Hence the default loss becomes riskier in higher tranches, even though a default loss is less likely and on average smaller. In addition, as default losses on tranches are comonotonic, there is no diversification benefit from holding multiple tranches originating from the same loss. This lack of diversification is a reason for catastrophic financial losses during the 2008 crisis \citep{kolb2010lessons}. 
+Both PD and PEL on tranche $[V_\alpha,V_\beta]$ decrease as $\alpha$ or $\beta$ increases. Hence the probability and expected proportion of default are smaller for higher tranches, consistent with common knowledge. However RR increases since $r_\pi^*$ is increasing in $\pi$. Hence the default loss becomes riskier in higher tranches, even though a default loss is less likely and on average smaller. In addition, as default losses on tranches are comonotonic, there is no diversification benefit from holding multiple tranches originating from the same loss. This lack of diversification is a reason for catastrophic financial losses during the 2008 crisis \citep{kolb2010lessons}.
 
 
 
@@ -868,7 +858,7 @@ $$
 \section{Conclusion}
 
 
-This paper develops a framework to analyze mean and risk contributions by VaR--layers of a loss. Expressing layers using VaRs establishes connections with the standard use of VaRs in insurance and finance. 
+This paper develops a framework to analyze mean and risk contributions by VaR--layers of a loss. Expressing layers using VaRs establishes connections with the standard use of VaRs in insurance and finance.
 
 Applying mean and risk densities yields insights to common risk management problems involving capital, reinsurance and finance.
 

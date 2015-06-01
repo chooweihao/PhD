@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2012.8.5)  28 MAY 2015 20:22
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2012.8.5)  1 JUN 2015 21:40
 entering extended mode
 **C:/Users/Admin/Documents/GitHub/PhD/Chapter*4/systematicrisk.tex
 ("C:/Users/Admin/Documents/GitHub/PhD/Chapter 4/systematicrisk.tex"
@@ -125,12 +125,12 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
 LaTeX Font Info:    ... okay on input line 72.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
 LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Try loading font information for U+msa on input line 103.
+LaTeX Font Info:    Try loading font information for U+msa on input line 99.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 103.
+LaTeX Font Info:    Try loading font information for U+msb on input line 99.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -139,36 +139,35 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 ]
 
-Package natbib Warning: Citation `xxx' on page 2 undefined on input line 141.
+Package natbib Warning: Citation `xxx' on page 2 undefined on input line 131.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 141.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 131.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 141.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 131.
  [2]
 
-Package natbib Warning: Citation `xxx' on page 3 undefined on input line 150.
+Package natbib Warning: Citation `xxx' on page 3 undefined on input line 140.
 
 
-Package natbib Warning: Citation `xxx' on page 3 undefined on input line 162.
+Package natbib Warning: Citation `xxx' on page 3 undefined on input line 152.
 
-[3]
 
-Package natbib Warning: Citation `xxx' on page 4 undefined on input line 179.
+Package natbib Warning: Citation `xxx' on page 3 undefined on input line 169.
 
-[4]
+[3] [4]
 
-Package natbib Warning: Citation `xxx' on page 5 undefined on input line 228.
+Package natbib Warning: Citation `xxx' on page 5 undefined on input line 218.
 
 [5] [6]
 File: gumbel.eps Graphic file (type eps)
  <gumbel.eps>
 File: clayton.eps Graphic file (type eps)
  <clayton.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 301--305
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 291--295
  [][] 
  []
 
@@ -177,7 +176,7 @@ File: gumbelnew.eps Graphic file (type eps)
  <gumbelnew.eps>
 File: claytonnew.eps Graphic file (type eps)
  <claytonnew.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 406--410
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 396--400
  [][] 
  []
 
@@ -195,12 +194,12 @@ File: risk1.eps Graphic file (type eps)
 <risk1.eps>
 File: risk2.eps Graphic file (type eps)
  <risk2.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 456--464
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 446--454
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 30.56926pt on input line 467.
+LaTeX Warning: Float too large for page by 30.56926pt on input line 457.
 
 File: nasdaqcop.eps Graphic file (type eps)
 <nasdaqcop.eps>
@@ -215,18 +214,18 @@ File: ftsecop.eps Graphic file (type eps)
 File: ftserisk.eps Graphic file (type eps)
 
 <ftserisk.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 472--480
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 462--470
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 21.5137pt on input line 483.
+LaTeX Warning: Float too large for page by 21.5137pt on input line 473.
 
 File: aggmean.eps Graphic file (type eps)
 <aggmean.eps>
 File: aggrisk.eps Graphic file (type eps)
  <aggrisk.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 488--492
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 478--482
  [][] 
  []
 
@@ -244,12 +243,12 @@ Package natbib Warning: There were undefined citations.
 ### simple group (level 1) entered at line 1 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 1438 strings out of 493922
- 18247 string characters out of 3147306
- 77391 words of memory out of 3000000
- 4713 multiletter control sequences out of 15000+200000
- 10950 words of font info for 42 fonts, out of 3000000 for 9000
+ 1432 strings out of 493922
+ 18197 string characters out of 3147306
+ 77228 words of memory out of 3000000
+ 4709 multiletter control sequences out of 15000+200000
+ 10433 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  32i,9n,34p,1155b,1809s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on systematicrisk.dvi (16 pages, 69724 bytes).
+Output written on systematicrisk.dvi (16 pages, 69220 bytes).
