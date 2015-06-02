@@ -85,6 +85,10 @@
 
 
 
+\title{Layer dependence as a measure of local dependence}
+
+
+
 \begin{abstract}
 A new measure of local dependence called  ``layer dependence" is proposed and analysed. Layer dependence measures the dependence between two random variables at different percentiles in their joint distribution. Layer dependence satisfies coherence properties similar to Spearman's correlation, such as lying between $-1$ and $1$, with $-1$, $0$ and $1$ corresponding to countermonotonicity, independence and comonotonicity, respectively. Spearman's correlation is  a weighted average of layer dependence across all percentiles.  Alternate overall dependence measures are arrived by varying the weights. Layer dependence is an important input to copula modeling by extracting the dependence structure from past data and incorporating expert opinion if necessary.
 \end{abstract}

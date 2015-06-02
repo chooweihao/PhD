@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2012.8.5)  1 JUN 2015 21:39
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2012.8.5)  2 JUN 2015 18:32
 entering extended mode
 **C:/Users/Admin/Documents/GitHub/PhD/Chapter*3/riskdecomposition.tex
 ("C:/Users/Admin/Documents/GitHub/PhD/Chapter 3/riskdecomposition.tex"
@@ -117,23 +117,23 @@ Excluding comment 'comment')
 LaTeX Warning: Label `reinsurance' multiply defined.
 
 )
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Try loading font information for U+msa on input line 98.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Try loading font information for U+msa on input line 100.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 98.
+LaTeX Font Info:    Try loading font information for U+msb on input line 100.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -141,19 +141,19 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 
 ] [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 207.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 209.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 207.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 209.
  [3] [4] [5]
 File: meancont.eps Graphic file (type eps)
 
 <meancont.eps>
-Overfull \hbox (8.43869pt too wide) in paragraph at lines 287--290
+Overfull \hbox (8.43869pt too wide) in paragraph at lines 289--292
  [][] 
  []
 
@@ -166,12 +166,12 @@ File: parrisk.eps Graphic file (type eps)
  <parrisk.eps>
 File: weirisk.eps Graphic file (type eps)
  <weirisk.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 452--458
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 454--460
  [][] 
  []
 
 [11] [12] [13]
-Overfull \hbox (1.72275pt too wide) in paragraph at lines 561--562
+Overfull \hbox (1.72275pt too wide) in paragraph at lines 563--564
 [][]\OT1/cmr/m/n/10 Empirical mean den-si-ties are large at low VaR--layers, th
 en de-crease rapidly
  []
@@ -184,7 +184,7 @@ File: mean.eps Graphic file (type eps)
  <mean.eps>
 File: risk.eps Graphic file (type eps)
  <risk.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 569--575
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 571--577
  [][] 
  []
 
@@ -193,7 +193,7 @@ File: shortfallcap.eps Graphic file (type eps)
  <shortfallcap.eps>
 File: varcap.eps Graphic file (type eps)
  <varcap.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 691--695
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 693--697
  [][] 
  []
 
@@ -213,10 +213,10 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  1419 strings out of 493922
  17965 string characters out of 3147306
- 74178 words of memory out of 3000000
+ 74145 words of memory out of 3000000
  4703 multiletter control sequences out of 15000+200000
  10433 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  32i,10n,34p,884b,1816s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on riskdecomposition.dvi (23 pages, 92432 bytes).
+Output written on riskdecomposition.dvi (23 pages, 92232 bytes).

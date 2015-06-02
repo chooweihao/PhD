@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2012.8.5)  1 JUN 2015 21:40
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2012.8.5)  2 JUN 2015 18:31
 entering extended mode
 **C:/Users/Admin/Documents/GitHub/PhD/Chapter*4/systematicrisk.tex
 ("C:/Users/Admin/Documents/GitHub/PhD/Chapter 4/systematicrisk.tex"
@@ -113,24 +113,24 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 
 Excluding comment 'comment')
 ("C:\Users\Admin\Documents\GitHub\PhD\Chapter 4\systematicrisk.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Try loading font information for U+msa on input line 99.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Try loading font information for U+msa on input line 101.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 99.
+LaTeX Font Info:    Try loading font information for U+msb on input line 101.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -139,35 +139,35 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 ]
 
-Package natbib Warning: Citation `xxx' on page 2 undefined on input line 131.
+Package natbib Warning: Citation `xxx' on page  undefined on input line 133.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 131.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 133.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 131.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 133.
  [2]
 
-Package natbib Warning: Citation `xxx' on page 3 undefined on input line 140.
+Package natbib Warning: Citation `xxx' on page  undefined on input line 142.
 
 
-Package natbib Warning: Citation `xxx' on page 3 undefined on input line 152.
+Package natbib Warning: Citation `xxx' on page  undefined on input line 154.
 
 
-Package natbib Warning: Citation `xxx' on page 3 undefined on input line 169.
+Package natbib Warning: Citation `xxx' on page  undefined on input line 171.
 
 [3] [4]
 
-Package natbib Warning: Citation `xxx' on page 5 undefined on input line 218.
+Package natbib Warning: Citation `xxx' on page  undefined on input line 220.
 
 [5] [6]
 File: gumbel.eps Graphic file (type eps)
  <gumbel.eps>
 File: clayton.eps Graphic file (type eps)
  <clayton.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 291--295
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 293--297
  [][] 
  []
 
@@ -176,7 +176,7 @@ File: gumbelnew.eps Graphic file (type eps)
  <gumbelnew.eps>
 File: claytonnew.eps Graphic file (type eps)
  <claytonnew.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 396--400
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 398--402
  [][] 
  []
 
@@ -194,12 +194,12 @@ File: risk1.eps Graphic file (type eps)
 <risk1.eps>
 File: risk2.eps Graphic file (type eps)
  <risk2.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 446--454
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 448--456
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 30.56926pt on input line 457.
+LaTeX Warning: Float too large for page by 30.56926pt on input line 459.
 
 File: nasdaqcop.eps Graphic file (type eps)
 <nasdaqcop.eps>
@@ -214,18 +214,18 @@ File: ftsecop.eps Graphic file (type eps)
 File: ftserisk.eps Graphic file (type eps)
 
 <ftserisk.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 462--470
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 464--472
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 21.5137pt on input line 473.
+LaTeX Warning: Float too large for page by 21.5137pt on input line 475.
 
 File: aggmean.eps Graphic file (type eps)
 <aggmean.eps>
 File: aggrisk.eps Graphic file (type eps)
  <aggrisk.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 478--482
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 480--484
  [][] 
  []
 
@@ -245,10 +245,10 @@ Package natbib Warning: There were undefined citations.
 Here is how much of TeX's memory you used:
  1432 strings out of 493922
  18197 string characters out of 3147306
- 77228 words of memory out of 3000000
+ 77203 words of memory out of 3000000
  4709 multiletter control sequences out of 15000+200000
  10433 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  32i,9n,34p,1155b,1809s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on systematicrisk.dvi (16 pages, 69220 bytes).
+Output written on systematicrisk.dvi (16 pages, 69088 bytes).

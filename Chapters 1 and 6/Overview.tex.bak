@@ -1,0 +1,711 @@
+\documentclass[a4paper, 12pt]{report}
+\setlength\arraycolsep{2pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\setcounter{tocdepth}{0}
+\usepackage{graphicx}
+\usepackage{chicago}
+\usepackage{amsfonts}
+\usepackage{pdfpages}
+\usepackage{comment}
+\bibliographystyle{chicago}
+
+
+\newcommand{\eref}[1]{(\ref{#1})}
+\newcommand{\fref}[1]{Figure \ref{#1}}
+\newcommand{\sref}[1]{\S\ref{#1}}
+\newcommand{\tref}[1]{Table \ref{#1}}
+\newcommand{\aref}[1]{\ref{#1}}
+\newcommand{\bi}{\begin{itemize}}
+\renewcommand{\i}{\item}
+\newcommand{\ei}{\end{itemize}}
+
+
+\title{Novels tools for coherent quantitative risk management}
+\author{Weihao Choo \\ \\ Department of Applied Finance and Actuarial Studies \\ Macquarie University \\ \\ PhD submission \\ \\ 2015}
+\date{}
+
+
+\begin{document}
+
+
+\maketitle
+
+
+
+\section*{Abstract}
+
+
+
+
+This thesis proposes novel methods to analyze risk and dependence across a joint probability distribution. It is well known in finance and insurance that risk and dependence are vastly different in the tails compared to the rest of the distribution. Tails characterise events such as market crisis and natural catastrophes, and contribute to a significant portion of overall risk and dependence. However typical measures of risk and dependence capture the overall result and mask variations across the probability distribution.
+
+
+
+Random quantities are partitioned into infinitesimal layers capturing outcomes of various magnitude and likelihood. Risk and dependence are then measured across layers using established methods such as distortion and correlation. Layers are standard constructs representing (re)insurance coverage, capital consumption and shortfall, derivative payouts, and tranches of collateralised debt obligations. This thesis expresses layer endpoints using percentiles or more commonly known as Values--at--Risk (VaRs), hence each layer occupies a relative position in the probability distribution.
+
+
+This thesis also extends distortion risk measurement by capturing upside risk in addition to downside risk. In financial and insurance markets with strong competition and limited availability of capital, an explicit, balanced view of downside and upside risk is required to reflect opportunity costs.
+
+
+
+Developments in this thesis formalise existing, and reveal new, insights to risk and diversification. For example the framework explains weak diversification in financial and insurance markets despite moderate correlations overall. The framework also deals with problems such as setting capital buffers, reinsurance purchase and assessing the credit quality of debt tranches.  These insights arise from a deeper understanding of how risk and dependence varies across a probability distribution.
+
+
+
+
+Proposed methods apply consistent concepts such as VaRs, distortion and layers, and hence form a coherent analytical framework. Applied concepts are well established and hence the resulting framework integrates and expands current disparate approaches. The proposed framework is a complete tool to quantitative risk management, by first analysing risk and dependence when imperfectly dependent random quantities are aggregated, and then guiding strategies to optimally manage and reduce risk.
+
+
+
+\begin{comment}
+``Layer dependence" summarises dependence structures underlying random quantities by measuring dependence between their layers. Layer dependence decomposes and spreads Spearman's rho across the joint distribution. In addition practical properties of Spearman's rho apply to layer dependence.
+
+
+``Mean densities" and ``risk densities" indicate mean values and distortion risks of infinitesimal layers forming random quantities. Mean and risk densities are akin to probability densities: integrating yields means and risks of larger layers. Systematic and diversifiable risks are separated, and the extent of diversification is shown to vary inversely with layer dependence across the probability distribution.
+\end{comment}
+
+
+
+\newpage
+
+
+\section*{Acknowledgements}
+
+I would like to express my gratitude to my supervisor, Professor Piet de Jong, for his critique of my research ideas which strongly guided the development of this thesis. Piet also taught me that research ideas are most convincingly presented when expressed in the simplest form.
+
+My thanks also go to my wife, Qinyi Phua, who strongly supported my research work over the years despite our busy work schedules.
+
+
+
+
+\tableofcontents
+
+
+
+
+\chapter{Thesis contributions and the literature}
+
+
+
+\section{Overview of this thesis}
+
+
+This thesis presents papers discussing novel solutions to four critical problems in quantitative risk management. These problems relate to analyzing risk, dependence and diversification in a joint probability distribution, and forming balanced risk measures capturing both upside and downside.
+
+Section \aref{qrm} provides an overview of quantitative risk management. Section \aref{questions} identifies the four problems addressed in this thesis. Section \aref{layer} introduces well known concepts of layers, Value--at--Risk and distortion risk which are critical to remaining discussion in this chapter. Subsequent sections delve into each problem, explaining its role and importance in quantitative risk management, summarising and critiquing current approaches, and outlining proposed solutions.
+
+
+Proposed solutions modify, enhance and combine established approaches in the literature. Proposed solutions to the four problems also integrate to form a coherent analytical framework for quantitative risk management.
+
+
+Subsequent chapters of this thesis are structured as follows:
+\bi
+
+\i Chapter 2 presents the paper ``\textit{Layer dependence as a measure of local dependence}," which measures local dependence across percentiles of a joint probability distribution.
+
+\i Chapter 3 presents the paper ``\textit{Mean and risk densities and their applications to risk management}," which analyzes how mean and risk varies across layers of a random loss.
+
+\i Chapter 4 presents the paper ``\textit{Insights to systematic risk and diversification across a joint probability distribution}," integrating layer dependence and risk density curves to analyze systematic risk and diversification when random losses are aggregated.
+
+\i Chapter 5 presents the paper ``\textit{The tradeoff insurance premium as a two-sided generalisation of the distortion premium}," an extension of distortion risk measurement which explicitly reflects upside risk in addition to downside risk and is related to cumulative prospect theory.
+
+\i Chapter 6 concludes this thesis by discussing how proposed approaches form an integrated approach to quantitative risk management.
+
+\ei
+
+
+
+\section{Quantitative risk management}\label{qrm}
+
+
+Risk generally refers to unpredictable outcomes having a positive or negative impact\footnote{A formal definition of risk is discussed later in this thesis, using distortion.}. Risk is inherent in financial and insurance markets. For example banks are exposed to future uncertain movements in stock markets, interest rates, credit defaults and the state of the economy. Insurers are impacted by the same factors and insurance claims volatility particularly from man--made and natural catastrophes.
+
+
+Quantitative risk management quantifies and manages risk. \shortciteN{mcneil2005qrm} discusses the history, issues and common techniques of quantitative risk management. Risk quantification is not only driven by the probabilistic behaviour of outcomes, but also risk perception. High risk aversion magnifies risks, whereas risk neutrality dismisses risks. Quantitative risk management typically focuses on adverse outcomes with negative impact. For instance banks and insurers calculate the risk of unexpected losses and hold capital buffers accordingly. Other examples of focusing on adverse outcomes are the purchase of reinsurance cover for catastrophe losses, using derivatives to hedge portfolio losses, putting risk discounts on securities prices, and early warning systems for adverse financial movements.
+
+
+Quantitative risk management is increasingly important for financial and insurance companies. For example Solvency II \shortcite{eling2007solvency} imposes formal risk management requirements on insurers, including the need to hold capital commensurate with market, credit, underwriting, catastrophe and operational risks. Basel II \cite{engelmann2006basel} and more recently Basel III \cite{king2011basel} impose equally if not more stringent requirements on banks. Major insurers and banks typically develop stochastic models of their business and manage risks according to simulated results \shortcite{kaufmann2001introduction}. Quantitative risk management is also an important component of the broader Enterprise Risk Management (ERM) \cite{nocco2006enterprise}, where quantifiable and non-quantifiable risks are managed holistically to take advantage of synergies and diversification.
+
+
+Quantitative risk management is a broad area covering a wide range of topics. This thesis focusses on measuring and analyzing risk and dependence. Specific interest areas are outlined in the next section. Subsequent sections discuss the importance of these interest areas, current approaches and their limitations, and proposed solutions. The following is a brief description of dependence and risk measurement:
+
+\bi
+
+
+\i Risk measurement quantifies the magnitude and likelihood of adverse outcomes. Quantified risks are critical inputs to risk management decisions. For example banks hold capital buffers which increase with risks of stock market downturns, credit defaults and other adverse financial movements \cite{king2011basel}. Reinsurance purchases by insurers refer to the extent of catastrophe risk. Value--at--Risk is a common risk measure but with shortcomings, and refined measures satisfying coherence properties have been proposed \shortcite{mcneil2005qrm}.
+
+
+\i Dependence measurement captures the degree of association between random outcomes, and is typically based on linear correlation \shortcite{mcneil2005qrm}. Dependence is a common feature of financial and insurance markets. For example returns from various stocks are dependent, particularly when in distress \cite{rodriguez2007measuring}. Natural catastrophes create significant losses across insurers and their portfolios such as property, motor and liability.
+
+
+\ei
+Risk and dependence  measurement become intimately connected when random losses from different sources are aggregated. Imperfect dependence creates diversification benefits: a reduction in aggregate risk when favourable outcomes in a group of losses offset adverse outcomes in other losses. On the other hand strong dependence leads to catastrophic consequences when loss outcomes are simultaneously adverse. Effective quantitative risk management exploits diversification. However diversification is often treated as an anecdotal phenomenon and is insufficiently analysed in the literature.
+
+Risk and dependence are rarely static across a joint probability distribution, and change significantly in the tails capturing extreme outcomes such as market crashes and catastrophes. Reflecting varying risk and dependence behaviour is hence critical in quantitative risk management, but often insufficiently acknowledged in current approaches.
+
+
+
+\section{Specific areas addressed in this thesis}\label{questions}
+
+
+This thesis proposes novel solutions to the following four specific problems in risk  and dependence  measurement. Remaining sections of this chapter delve into each problem. The four problems are:
+
+\bi
+
+\i Measuring local dependence between random losses. Of interest is dependence at various parts of the joint distribution, rather than overall dependence. To illustrate the importance of measuring local dependence, consider stock returns which are highly dependent when in distress but less dependent otherwise under normal circumstances. Focussing on overall dependence understates tail dependence and leads to insufficient capital buffers against market risk.
+
+
+\i Decomposing the mean and risk of a random loss and understanding contributions by various parts of its probability distribution. For example, significant portions of the mean and risk of a right skewed loss distribution are concentrated in the upper tail. Understanding mean and risk contributions yields targeted risk management strategies to achieve an optimal mean--risk combination.
+
+
+\i Analyzing risk and diversification when imperfectly dependent losses are aggregated. Aggregation reduces risk. For example the stock market index is less volatile than its component stocks. Systematic risk remains after diversification. Of interest are key sources of systematic risk and diversification in the joint distribution so that, similar to the previous problem, optimal strategies can be formulated.
+
+
+\i Reflecting upside in addition to downside when measuring risk. Despite the widespread focus on downside risk in the literature, upside risk is also important and neglecting it leads to opportunity losses. For example, excessive focus on downside risk leads to an uncompetitive insurance premium, whereas acknowledging and reflecting favourable outcomes achieves a more balanced premium.
+
+\ei
+For the first three problems described above, the literature extensively discusses measures of \textit{overall} dependence, risk and diversification, but offers less insights into how dependence, risk and diversification \textit{vary} across the probability distribution. For example linear correlation does not indicate differing dependence between random losses at their 50th, 75th and 99th percentiles. These insights are important because risk management strategies usually target parts of loss distributions rather than their entirety. For example, reinsurance covers losses above the excess. Capital protects against losses below itself. Derivatives hedge movements in a defined region.
+
+
+
+Problems discussed in this thesis, and their proposed solutions, are generic and apply to any situation involving risk and dependence. Quantifiable risk typically involve monetary quantities in insurance and finance, but can also be extended to quantities such as the amount of rainfall, passenger volume and population size. These non--monetary quantities are uncertain and involve risk, and each depends on a number of other uncertain factors.
+
+
+
+
+Marginal behaviour of random variables is assumed known. The modeling of marginal behaviour is well covered in the literature. Parametric or non-parametric distributions are typically first fitted to data, and tests are then performed to assess the suitability of the fit. References include \citeN{feller2008introduction} and \citeN{hogg2009loss}. Extreme value theory \cite{kotz2000extreme} addresses tail behaviour representing extreme outcomes.
+
+
+
+A single period is assumed. Therefore the time series behaviour of random variables, for example daily stock market returns over one year, are ignored. Typical time series models in quantitative risk management, such as Autogressive Moving Average (ARMA) and Generalised Autoregressive Conditional Heteroskedasticity (GARCH) models, are discussed in \shortciteN{mcneil2005qrm} and \citeN{lamoureux1990heteroskedasticity}.
+
+
+
+\section{Established concepts used in this thesis}\label{layer}
+
+
+Common to proposed solutions in this thesis are concepts of layers, Values-at-Risk and distortion risks. Hence proposed solutions naturally integrate  to form a coherent quantitative risk management framework. The final chapter discusses the integration. This section introduces each concept, setting the scene for the discussion of proposed solutions in subsequent sections.
+
+
+
+Any loss can be decomposed into additive layers. The $[a,b]$--layer of a loss is the excess over $a$, capped at $b-a$. In particular the $[a,\infty]$--layer is the unbounded excess above $a$, and the $[0,b]$--layer is the loss capped at $b$. Layers are standard insurance and financial constructs. For example insurance and reinsurance cover a layer of the loss defined by an excess and limit. Capital buffers divide losses into two layers: capital consumed and capital shortfall. Derivatives and collaterised debt obligations also involve layers, sometimes known as tranches with attachment and detachment points. Bailouts of a distressed company cover a layer of losses suffered. High layers capture rare, extreme outcomes and low layers characterise common, attritional outcomes. Statistical properties of layers are discussed in \citeN{campana2014risk}, \citeN{wang1998actuarial}, \citeN{wang1995insurance} and \citeN{miccolis1977theory}. \citeN{lee1988mathematics} adopts a graphical approach to explain key concepts and results. Insurance pricing of loss layers is discussed in \citeN{evans2001exposure} and \citeN{salzmann1963rating}. \shortciteN{mandel2012role} and \citeN{duffie2001risk} discuss tranches in collaterised debt obligations and how they partially enhance the credit quality of the debt.
+
+
+Values-at-Risk (VaRs) are percentiles of a loss distribution \shortcite{mcneil2005qrm}. Writing loss outcomes as VaRs shows their relative position in the probability distribution. For example the 50\% VaR is the median or middle outcome, whereas the 75\% VaR is the 75th largest out of 100 outcomes. VaRs adjust to the shape and scale of the loss distribution, and are hence comparable across loss distributions. In contrast absolute dollar amounts are not probabilistic and may be a commonly exceeded outcome in a loss distribution but a rare, extreme outcome in another. Similar to layers, VaRs are standard insurance and financial constructs. For example Solvency II insurance regulation applies $90\%$ and $99.5\%$ VaRs \shortcite{eling2007solvency} to capital requirements. Banking regulations Basel II and more recently Basel III also reference VaRs in risk measurement \shortcite{chernobai2008operational}.
+
+
+Lastly distortion risk \cite{wang1996pct} is risk formed by the difference between the average outcome under a distorted, conservative probability distribution and the original, objective distribution\footnote{The original formulation only includes the distorted average and does not take the difference with the original average.}. \citeN{choo2009loss} shows that distortion risks are proportional to loss volatility and risk aversion, and are equivalent to loss aversion risks and spectral risks \cite{acerbi2002spectral}, both defined as weighted average of VaRs. Examples of distortion risks are discussed in \citeN{wang1995insurance}, \citeN{wang2000cdo} and \citeN{choo2009loss}, and include the proportional hazards risk, conditional--tail--expectation and expected--maximal--loss. Distortion risks are coherent \shortcite{artzner1999cmr}: positively homogenous, translation invariant, monotonic and subadditive.
+
+
+
+
+
+\section{Local dependence and its measurement}\label{local}
+
+
+\subsection{Importance of local dependence}
+
+
+Dependence is inherent in financial, insurance, commodities and other markets. For example interest rates, unemployment, stock market returns and credit defaults are interdependent and partially reliant on the economy. In addition these quantities are dependent on corresponding quantities in other geographies and countries. Insurance claims from motor, property and liability classes are also interdependent, due to their reliance on common economic and social factors, as well as weather patterns.
+
+
+
+Measuring and subsequently modeling dependence is thus a critical part of quantitative risk management. To illustrate the importance of dependence, suppose a bank holds capital against the risk of stock market crashes and credit defaults by borrowers. If these two risk factors are strongly dependent, then large amounts of capital are required to cover market crashes and credit defaults occurring simultaneously. On the other hand if dependence is weak, then required capital is significantly lower since market crashes are unlikely to coincide with credit defaults -- a diversification benefit.
+
+
+
+Dependence typically varies across the joint distribution, giving rise to the need for \textit{local} dependence measures. For example moderate returns from various stocks may be weakly dependent but extreme returns are strongly dependent (\citeN{rodriguez2007measuring} and \shortciteN{hartmann2004asset}). In insurance, attritional losses from various lines are weakly dependent, however a catastrophic event creates equally extreme losses across all lines. Failure to acknowledge varying dependence, and applying the average dependence across the joint distribution, leads to for example underestimation of tail events where extreme outcomes from various risk factors occur simultaneously. The 2008 global financial crisis \cite{kolb2010lessons} is a relevant case study.
+
+
+
+
+\subsection{Measures of overall and local dependence}
+
+
+Dependence measures lie between $\pm 1$, with $-1$ indicating perfect negative dependence (countermonotonicity) and $1$ indicating perfect positive dependence, (comonotonicity) \shortcite{dhaene2002concept}. Positive dependence implies random variables tend to increase simultaneously, and vice versa for negative dependence. Dependence is measured either between random variables in their original values or percentile rank transforms. The latter leads to ``rank dependence" which is calculated from the copula \cite{nelson1999ic}. The former is distorted by marginal distributions and only covers a subset of $[-1,1]$, even with perfect dependence \shortcite{mcneil2005qrm}. Rank dependence is free of distortion by marginal distributions, and covers $[-1,1]$ completely.
+
+
+Measures of overall dependence, including Pearson's correlation, Spearman's $\rho$ and Kendall's $\tau$  \shortcite{mcneil2005qrm}, do not characterise the dependence \textit{structure} of the joint distribution. As explained in the previous subsection, dependence typically varies across joint distributions of financial and insurance quantities, and tail dependence is common. Failure to measure and hence properly model the dependence structure results in ineffective risk management, such as holding insufficient capital.
+
+
+Local dependence measures address the drawback of overall dependence measures, by measuring dependence at various points or parts of the joint distribution. The set of local dependence values calculated across the entire joint distribution characterises the dependence structure. Local dependence measures are a summary of the joint distribution or copula, but are less summarised than overall dependence measures. The following describes current local dependence measures and their shortcomings:
+
+
+\bi
+
+\i Tail concentration (\shortciteN{durante2014copulas}, \citeN{venter2002tails}) is the conditional probability of percentile ranks falling in identical tail regions, and is calculated from the diagonal section of the copula \cite{fredricks1997copulas}. Varying the tail region yields dependence at various parts of the joint distribution. Calculating the conditional probability in extreme tails yields coefficients of tail dependence by \citeN{joe1997multivariate}.
+
+Tail concentration, being a probability, excludes actual values of random variables. As a result tail concentration does not always vary coherently across the joint distribution. In addition negative dependence is not obviously shown from tail concentration values.
+
+
+
+\i Correlation curve \cite{bjerve1993correlation} applies regression principles and measures dependence between a random variable and a neighbourhood of another. The measurement combines conditional variances and changes in conditional expectations across neighbourhoods. A larger change in conditional expectation or lower conditional variance implies higher local dependence and vice versa.
+
+Despite satisfying several coherence properties, correlation curve is difficult to calculate on data, due to the reliance on conditional expectation and conditional variance in an infinitesimal neighbourhood. Calculated values are volatile even for large samples.
+
+
+\i \shortciteN{bairamov2003new}, \citeN{jones1996local} and \citeN{holland1987dependence} discuss bivariate local dependence measures. These capture dependence between different neighbourhoods of two random variables. In contrast tail concentration and correlation curves are univariate measures.
+
+Bivariate local dependence measures maintain the dimension of the bivariate joint distribution, whereas univariate measures summarise and extract dependence information. This thesis focuses on univariate local dependence measures.
+
+
+
+\ei
+Apart from the shortcomings described above, current local dependence measures are generally disconnected from overall dependence measures such as Spearman's $\rho$ and Kendall's $\tau$. As a result local dependence may be consistently higher or lower than overall dependence. Layer dependence, a local dependence measure proposed in this thesis, is consistent with Spearman's $\rho$. Layer dependence also satisfies several other practical properties. The next subsection discusses layer dependence.
+
+
+Specifying local dependence values, that is the dependence structure, is an intuitive approach to model copulas. For example \citeN{fredricks1997copulas} and \shortciteN{durante2006family} discuss copulas constructed from a given diagonal section which is in turn implied from tail concentration values. However local dependence measurement needs to be appropriate in order to obtain a copula with the desired dependence structure.
+
+
+
+
+
+\subsection{Layer dependence as a local dependence measure}
+
+
+
+This thesis proposes a local dependence measure called ``layer dependence." Layer dependence captures rank dependence and is hence calculated entirely from the copula. As discussed in the previous subsection, rank dependence is free from distortion by marginal distributions and is preferred over dependence calculated between original values. Chapter 2 contains a paper defining, illustrating and analyzing layer dependence.
+
+
+Layer dependence accurately reflects local dependence, and satisfies important properties described below. For a copula exhibiting weak lower tail dependence and strong upper tail dependence, layer dependence increases from near $0$ to near $1$. Suppose observations are simulated from a copula and plotted on the unit square. Then layer dependence is higher at any point along the $45^{\circ}$ line if observations are tightly clustered around the point, and lower if observations are dispersed.
+
+
+
+
+The definition and concept of layer dependence are as follows. As the name suggests, layer dependence involves layers discussed in \sref{layer} and is defined from the covariance between the percentile rank of a random variable and an infinitesimal layer of another. The covariance is scaled to yield a value of one if random variables are comonotonic. An infinitesimal layer of a random variable captures its movements at a point, hence layer dependence is dependence between a random variable and local movements of another.
+
+
+
+
+Layer dependence satisfies practical properties similar to Spearman's $\rho$: between $-1$ and $1$, constant and equal to $-1$, $0$ and $1$ for countermonotonic, independent and comonotonic random variables, sign switching when ranking order reverses, and taking on higher values when dependence is stronger.
+
+
+Layer dependence has a direct relationship with Spearman's $\rho$: taking a weighted average of layer dependence values across all layers is Spearman's $\rho$. This relationship is intuitive and appealing -- averaging local dependence yields overall dependence. Weights attached to layer dependence values are quadratic, peaking at the median layer and approaching zero at the tails. These weights imply Spearman's $\rho$ understates tail dependence, a critical characteristic of insurance and financial quantities. More appropriate overall dependence measures are formed by averaging layer dependence values using weights reflecting the importance of dependence at various layers. These alternate measures satisfy similar coherence properties as Spearman's $\rho$ if weights are non-negative and integrate to 1.
+
+
+Layer dependence values are broadly similar to correlation curve and tail concentration values. However layer dependence enhances and outperforms these measures in a number of ways. Layer dependence refines tail concentration by reflecting average dispersion between percentile ranks, and is hence a better measure of local dependence. In addition negative dependence is indicated by negative layer dependence values. Layer dependence calculations on data only involve conditional tail expectations and are hence simpler and more stable than correlation curves. Lastly layer dependence is coherent and is directly connected to Spearman's $\rho$ as discussed above.
+
+
+Layer dependence captures tail dependence consistently with coefficients of tail dependence by \citeN{joe1997multivariate}. Layer dependence at extreme layers and coefficients of tail dependence are both one when tail dependence is perfect. Perfect tail dependence requires random variables to simultaneously attain their maximum or minimum values.
+
+
+
+Calculating layer dependence at the first instance from a parametric copula or data extracts essential and interpretable information: the dependence structure. This is often more informative than positing a parametric copula, as the implication of its parametric form and parameters on the dependence structure is indirect. Similar problems apply when data is scarce or volatile and the dependence structure is masked. Computing layer dependence from data facilitates the selection and fitting of an appropriate parametric copula. \shortciteN{denuitactuarial}, \citeN{genest1993statistical}  and \citeN{oakes1989bivariate} discusses the fitting of parametric copulas.
+
+
+
+
+
+\section{Mean and risk decomposition}\label{decompose}
+
+
+\subsection{Risk measurement and risk behaviour}
+
+
+A key exercise in quantitative risk management is calculating risk values of random losses from insurance claims, credit defaults and stock market downturns. Risk values, or risks, enable losses to be assessed and compared, and are key inputs to risk management decisions. For example insurance risk drives premium loadings, reinsurance purchases and capital buffers. Credit and market risks influence lending margins, capital buffers, investment decisions and hedging positions for derivatives.
+
+
+Risk measures assign risks to random losses based on their probability distribution, and are also known as premium principles. This thesis applies distortion risk measures described in \sref{layer}. \shortciteN{mcneil2005qrm} and \citeN{young2004premium} discuss other common risk measures such as standard deviation, Esscher premium, Value--at--Risk and conditional--tail--expectation. Risk typically increases with the volatility and skewness of the loss distribution. Risk perception also influences risk: greater risk aversion leads to greater risk and vice versa, whilst risk neutrality implies zero risk.
+
+
+This thesis studies the risk \textit{behaviour} of random losses: how risk varies across the probability distribution. Similar to dependence discussed in \sref{local}, random losses may have equal overall risk but different risk behaviour, and hence require different risk management strategies. Any measure of overall risk, regardless of its sensitivity to the loss distribution, does not completely characterise the risk profile of a loss. A ``risk density curve" is thus required to capture risk across the loss distribution. For a skewed loss distribution, risk density is low for moderate outcomes but high for extreme outcomes such as catastrophic insurance losses or stock market crashes.
+
+
+Analyzing risk behaviour is important to form optimal and targeted risk management strategies. For example, excess--of--loss reinsurance is purchased to cover losses above a threshold, and an optimal threshold balances risks of covered and retained losses and coverage cost. Setting an appropriate capital buffer involves similar considerations. In finance, pricing collaterised debt obligations and derivatives requires an understanding of the risk of payouts in different tranches.
+
+
+\begin{comment}
+Risk measures typically focus on downside (stock market losses, insurance losses) rather than upside (stock market gains, insurance profit). Neglecting upside leads to opportunity costs, for example uncompetitive insurance premiums and excessive capital buffers. Balanced risk measurement is separately studied in this thesis. A overview in provided in section \aref{balanced}.
+\end{comment}
+
+
+\subsection{Risk measurement across loss layers}
+
+
+Risk behaviour is captured by measuring risk across layers of a random loss using a consistent risk measure. As described in \sref{layer}, layers are standard insurance and financial constructs. A loss is formed by additive layers with low layers representing attritional, likely outcomes and high layers capturing extreme, rare outcomes. As layers of the same underlying loss are comonotonic, risks of individual layers add to overall risk if the risk measure is additive over comonotonic random variables\footnote{Distortion risk measures are additive over comonotonic random variables.}.
+
+
+The following summarises current literature on risk measurement across loss layers. The literature in this area is arguably less established compared to measures of overall risk. As explained in the previous subsection, analyzing risk behaviour is important to gain insights and form targeted risk management strategies.
+
+
+
+\bi
+
+\i \citeN{wang1995insurance} calls the survival function the premium layer density as it computes the mean value or premium of infinitesimal layers. The premium layer density is distorted to deliver risk-adjusted premiums of layers. Integrating the distorted premium layer density forms overall risk. \citeN{wang1995insurance} applies distorted premium layer densities to investigate premiums when the limit of an insurance contract is increased.
+
+\i \citeN{ladoucette2006analysis} analyzes risk measures including Value--at--Risk, variance, and coefficient of variation across layers of an insurance loss. The analysis is also extended to consider layers of a random sum of insurance losses.
+
+\i \citeN{hurlimann1998distribution} uses a distortion risk measure involving a two-stage loss transformation and the  Hardy-Littlewood pricing principle. This distortion risk measure is used to construct distribution-free layer premiums satisfying several practical properties.
+
+\i Certain measures of overall risk focus on tail layers of a loss and hence indicate risk behaviour. For example conditional--tail--expectation takes the expected value of losses beyond a threshold. Adding the scaled variance of these losses yields modified--tail--variance \cite{furman2008weighted}. Varying the threshold indicates risks of various tail layers.
+
+
+\i  \citeN{salzmann1963rating} and \citeN{evans2001exposure} perform empirical studies of appropriate premiums rates across loss layers for property insurance. \citeN{finger1976estimating} performs a similar study, assuming a lognormal loss distribution.
+
+
+\ei
+
+
+
+\subsection{Mean and risk densities over VaR layers}
+
+
+Similar to \citeN{wang1995insurance}, this thesis constructs mean and risk densities indicating the mean and distortion risk of infinitesimal loss layers. A novel and critical change to loss layers is applied: layer endpoints are expressed in VaR rather than dollar terms.  Hence mean and risk densities are defined over the unit interval indicating the percentile rather than over the original loss scale. As noted in \sref{layer}, VaRs occupy relative positions in the probability distribution and adjust to its shape and scale. The layer from the 50th VaR to 75th VaR, for example, captures the top $50\%$ of losses and the top $25\%$ of losses are capped at the 75th percentile. VaR layers are therefore comparable between loss distributions. In contrast original dollar layers may be attritional or rare depending on the loss distribution.
+
+
+Mean and risk densities are critical constructs in understanding the mean and risk behaviour of a random loss. As layers of the same loss are comonotonic, and distortion risks are additive over comonotonic random variables, integrating risk densities over any subset of the unit interval yields the risk of a larger layer. In addition the entire area under the risk density is overall distortion risk. The same result applies to mean densities, although the comonotonicity condition does not need to hold. Mean and risk densities are analogous to probability densities, representing quantities over an infinitesimal area, with integration yielding the same over a larger area.
+
+Defining mean and risk densities over VaR layers delivers the following properties and results. They also formalise current risk insights.
+\bi
+
+\i Mean and risk densities across loss distributions are graphed over the unit interval on the horizonal axis. Scale effects are isolated and captured by the vertical axis. In contrast scale effects are shown in horizontal and vertical axes if layers are defined on the original loss scale.
+
+
+\i The relative risk of a VaR layer (the ratio between risk and mean densities) is monotonic increasing and does not involve the loss distribution. Hence higher VaR layers are always riskier than lower VaR layers.
+
+
+\i The mean density characterises local skewness or volatility compared to an exponential distribution. As the mean density is flat for an exponential distribution, an increasing mean density at any layer indicates greater skewness comparatively.
+
+
+\i The overall distortion risk of a loss relative to its mean is an average of risk ratios across layers weighted by the mean density. As risk ratios are increasing and independent of the loss distribution, losses with high tail volatility (increasing mean density) are relatively riskier.
+
+
+\i Mean and risk densities defined over VaR layers, when applied to risk management problems such as capital setting, yield solutions expressed as VaRs instead of dollars. This is consistent with the standard use of VaRs in finance and insurance as described in \sref{layer}.
+
+
+\ei
+Mean and risk densities provide solutions and insights to common risk management problems. These problems include assessing insurance coverage under different excess and limits, setting optimal capital buffers to reflect risks of capital shortfall and surplus, using reinsurance to alter a loss distribution, and comparing the credit quality of various debt tranches. Although these problems can be solved using current statistical approaches, mean and risk densities provide more elegant solutions and deliver additional insights.
+
+
+Mean and risk densities integrate layer dependence discussed in the previous section with the analysis of systematic risk and diversification discussed in the next section. Hence an integrated analytical framework is constructed by defining mean and risk densities over VaR layers.
+
+
+
+
+
+\section{Systematic risk and diversification}\label{diversification}
+
+
+\subsection{Concepts of systematic risk and diversification}
+
+
+Risk reduces or diversifies when imperfectly dependent random variables are aggregated. For example the return on a market index is less volatile than returns of components forming the index. Average investment returns also stabilise over time. Pooling insurance claims reduces their volatility to an acceptable level. Diversification generally arises when adverse outcomes for a random variable are offset by favourable outcomes in other random variables. Therefore diversification weakens when random variables become more dependent and likely to be simultaneously adverse.
+
+
+Diversification implies the risk of a random loss is split into diversifiable and non-diversifiable. The latter is known as systematic risk in finance \cite{luenberger1998is}. Systematic risk contributes to aggregate risk, whereas diversifiable risk is eliminated upon aggregation. In insurance, systematic risks add up to aggregate risk and are hence an allocation of aggregate risk to component random losses. \citeN{kalkbrener2005aac} and \citeN{denault2001coherent} propose axioms for a coherent allocation including no undercut: systematic risk of any component loss is less than standalone risk before aggregation.
+
+
+Similar to risk and dependence discussed in the previous two sections, systematic risk and diversification varies across the loss distribution. Developments in this thesis show that the extent of diversification across the distribution and is inversely related to \textit{local} dependence with the aggregate random variable such as the index return or aggregate insurance loss. Current literature, further discussed in the next subsection, makes this observation usually in an intuitive manner rather than under a formal setting.
+
+
+Developing insights to systematic risk and diversification yields optimal risk management strategies targeting areas of joint loss distributions with high systematic risk and low diversification, in order to reduce aggregate risk. For example, excess--of--loss reinsurance is purchased to only cover tails of losses with high rather than low systematic risk. Or consider a company comprising of business units. The systematic risk of a business unit drives its risk-adjusted performance and remuneration. Hence it is critical for every business unit to understand sources of its systematic risk and ways to maximise diversification.
+
+
+\subsection{Current approaches to analyse systematic risk and diversification}
+
+
+Approaches to derive systematic or allocated risks are well established in the literature. An overview is shown below. Current approaches provide broad insights into drivers of systematic risk, usually the dependence between component random variables. This thesis provides further insights by analyzing systematic risk and diversification across loss distributions.
+
+The following is an overview of current approaches to derive systematic or allocated risk:
+\bi
+
+\i In the capital asset pricing model (\citeN{luenberger1998is}, \citeN{sharpe1964cap}), the systematic risk of a security is proportional to correlation between its return and the market return, whilst overall risk of the security is the standard deviation of its return.
+
+\i \citeN{choo2010determining} provides similar insights to systematic risks as the capital asset pricing model. By applying the Euler allocation principle (\citeN{buch2008coherent}, \shortciteN{mcneil2005qrm}) to aggregate distortion risk, the systematic risk of a component loss is its covariance with a function of the aggregate loss. \citeN{furman2008weighted1} and \citeN{tsanakas2006risk} show similar results for allocated and systematic risks.
+
+
+\i The Euler allocation principle satisfies coherence axioms described in \citeN{denault2001coherent} and \citeN{kalkbrener2005aac}. These axioms include no undercut (allocated risk is less than standalone risk), symmetry (equal allocation to random variables with equal risk contribution) and riskless allocation (no allocation to risk-free random variables). Applying game theory \cite{shapley1974values} yields consistent results. Other properties and applications of Euler allocation are discussed in \citeN{tasche2007capital}.
+
+
+\i \citeN{sherris2006solvency} and \citeN{myers2001capital} derive allocations based on option values. \shortciteN{dhaene2012optimal} proposes a general approach by minimising differences between allocated risk and losses. \shortciteN{van2012excess} argues against Euler allocation and performs an allocation by minimising expected shortfall in various portfolios. \citeN{cummins2000allocation} and \citeN{venter2004cas} summarise and critique current allocations.
+
+
+
+\ei
+
+
+
+
+\subsection{Proposed analytical framework for systematic risk and diversification}
+
+
+This thesis constructs a framework to analyze systematic risk and diversification across layers of component losses. The framework expands risk densities in \sref{decompose} and forms links with layer dependence in \sref{local}. Insights gained from the proposed framework are critical to managing risks when imperfectly dependent losses are aggregated.
+
+
+Cornerstone to the proposed framework are systematic risk densities indicating systematic risks of infinitesimal VaR layers forming a component loss. These risk densities are akin to those discussed in \sref{decompose} and identify risk contributions by various parts of the loss distribution. However systematic risk densities allow for diversification and exclude diversifiable risk. Systematic risk is measured as per \citeN{choo2010determining} by applying Euler allocation to distortion risk. Thus the systematic risk of a VaR layer is its covariance with a function of the aggregate loss. Since covariances are additive, integrating the systematic risk density over any interval yields the systematic risk of a larger layer, and the entire area under the density is the overall systematic risk as per \citeN{choo2010determining}.
+
+
+Calculating the ratio between systematic and standalone (i.e. before aggregation) risk densities reveals the lack of diversification in each layer of a component loss. Ratios close to 1 indicate minimal diversification, whereas ratios close to 0 or even negative indicate strong diversification. Ratios relate to layer dependence discussed in \sref{local}, between component and aggregate losses. Hence local dependence drives the level of systematic risk and diversification across the probability distribution. Strong local dependence increases systematic risk and reduces diversification in each layer.
+
+
+The relationship between local dependence and diversification across layers explains large systematic risks in financial markets exhibited for example during the 2008 global financial crisis \cite{kolb2010lessons}. This is despite relatively weak to moderate overall correlations observed over time. Strong tail dependence in financial markets (\citeN{rodriguez2007measuring} and \shortciteN{hartmann2004asset}), coupled with large tail risks (\citeN{cont2001empirical}, \citeN{hsieh1988statistical}) before diversification reflecting skewed return distributions, leads to significant amounts of non-diversifiable or systematic risk. Strong diversification below the tails does not significantly reduce overall risk as risks of individual return distributions are concentrated in the tails where diversification is weak.
+
+
+
+Insights into systematic risk and diversification are critical to advanced risk management involving multiple random variables. By plotting and comparing standalone and systematic densities of a loss, layers with high and low diversification are identified and addressed accordingly. For example, reinsurance, hedging and other mitigation actions target individual tails with large systematic risk and weak diversification, even though standalone risks may be equal. This strategy reduces aggregate risk effectively.
+
+
+This thesis also allocates the mean and risk density of the aggregate loss to component losses. The allocation is critical when risk management strategies target aggregate loss layers, such as stop-loss reinsurance and aggregate hedging, and their costs are allocated to individual losses. The allocation applies  conditional mean sharing where a random aggregate loss is allocated to individual losses based on conditional expectations \cite{denuit2012convex}. The allocated risk density for a loss differs from its systematic risk density, as layers refer to different losses. The latter uses layers of component losses, whilst the former refers to aggregate loss layers. Both densities indicate risk contributions to aggregate risk. In addition allocated mean and risk densities integrate to the overall mean and systematic risk of the loss, hence the allocation is unbiased.
+
+
+
+
+
+\section{Taking a balanced view of risk}\label{balanced}
+
+
+\subsection{Two--sided versus one--sided risk measurement}
+
+
+As highlighted in \sref{decompose}, risks measured from random insurance and financial quantities form critical inputs to risk loadings, capital buffers, reinsurance purchases and derivative hedging positions. Risk measures, or premium principles, are well established in the literature and common examples are discussed in \citeN{young2004premium} and \shortciteN{mcneil2005qrm}.
+
+
+Due to widely perceived negative consequences of uncertainty and volatility, risk measures are typically one--sided and quantify adverse rather than favourable outcomes. Common one--sided risk measures are discussed in the next subsection. On the other hand, two--sided risk measures capture favourable in addition to adverse outcomes. The distinction between one--sided and two--sided risk measures is well articulated in \shortciteN{dhaene2003economic}:
+
+\begin{quote}
+\textit{Two-sided risk measure (TRM): A two-sided risk
+measure measures the ``distance" between the
+risky situation and the corresponding risk-free
+situation when both favorable and unfavorable
+discrepancies are taken into account.}
+
+\textit{One-sided risk measure (ORM): A one-sided
+risk measure measures the “distance” between
+the risky situation and the corresponding risk-free
+situation when only unfavorable discrepancies
+contribute to the ``risk."}
+\end{quote}
+Two--sided, balanced risk measurement is crucial in modern financial and insurance markets where competition is intense and unnecessary conservatism results in opportunity costs. For example when setting capital buffers, excessive conservatism leads to high buffers and high holding costs, whereas taking a more balanced view with lower buffers yields potentially higher shareholder returns. In insurance pricing, taking a one--sided negative view of claim costs results in a high risk loading and an uncompetitive premium, leading to a loss of business to competitors with less pessimistic and more realistic views. The importance of capturing upside risk, and strategies of doing so, are discussed generally in \citeN{hillson2003effective} and \citeN{hillson2002extending}.
+
+
+
+
+
+\subsection{Current risk measurement approaches}
+
+
+The following are commonly used risk measures or premium principles. They are generally one--sided and focus on downside risk or adverse outcomes.
+\bi
+
+\i Value-at-Risk  (VaR) \cite{dowd2006after} is a high percentile in a loss distribution. VaR is commonly used in insurance and finance. For example Solvency II insurance regulations apply $90\%$ and $99.5\%$ VaRs \shortcite{eling2007solvency} in capital requirements. Banking regulations Basel II and Basel III also reference VaRs \shortcite{chernobai2008operational}.
+
+
+\i Conditional--tail--expectation (CTE) \cite{rockafellar2002conditional} is the average loss beyond a specified VaR. CTE addresses shortcomings of VaR, by reflecting the magnitude of outcomes above the VaR and satisfying subadditivity \cite{dowd2006after}. CTE is used in Swiss solvency regulations \cite{embrechts2014statistics}.
+
+
+\i Distortion risk measures \cite{wang1996pct} are expectations under increased loss survival probabilities, implying adverse outcomes are more likely. Distortion risk measures capture CTE, proportional hazard and other risk measures. \citeN{choo2009loss} shows the equivalence between distortion risk measures, loss aversion reserves and spectral risk measures \cite{acerbi2002spectral}, the latter two being weighted averages of VaRs with higher VaRs given greater weight.
+
+
+\i The zero utility premium \cite{gerber1985additive} is the certainty equivalent of a random loss using a risk averse utility function. The premium always exceeds the expected loss. Using the exponential utility function yields the exponential premium, which is a weighted average of Esscher premiums \shortcite{van1989properties}. \citeN{heilpern2003rank} calculates zero utility premiums using rank-dependent utility theory \cite{quiggin1982theory}, whilst \citeN{kaluszka2011pricing} proposes a similar approach using cumulative prospect theory \cite{tversky1992apt}.
+
+
+\ei
+In the above examples there is a one-sided bias on negative outcomes, and there is always a positive risk loading above the mean. Although it can be argued that excessive conservatism is avoided with appropriate selection of risk parameters, there is no explicit allowance for upside risk or favourable outcomes. This thesis proposes an approach, discussed in the next subsection, which explicitly captures and controls the relative importance of upside and downside risks.
+
+
+
+
+
+
+\subsection{Tradeoff premium as a two-sided risk measure}
+
+
+This thesis proposes ``tradeoff premiums" which are two--sided extensions of one--sided distortion risk measures. Upside and downside risks are explicitly captured and a ``loss appetite" controls their relative importance. Close links are also established to subjective probability in cumulative prospect theory.
+
+
+
+Tradeoff premiums are weighted premiums \cite{furman2008weighted}, with U--shaped instead of increasing weights. Similar to \citeN{choo2009loss}, weights are formulated in terms of loss percentile ranks. U--shaped weights stress the importance of favourable \textit{and} unfavourable outcomes. An exogenous loss appetite defines the turning point of the weights, and hence controls the relative importance of upside and downside risks. A low loss appetite implies weights are mostly increasing and generates a conservative premium dominated by downside risk. On the other hand a high loss appetite creates mostly decreasing weights and an aggressive premium with greater focus on upside risk.
+
+
+
+Cumulative prospect theory \cite{tversky1992apt} supports a U--shaped weight function: over--weighting extreme, unlikely outcomes and under--weighting average, likely outcomes. Further S--shaped distortion operators are implied from tradeoff premiums, consistent with probability adjustment in cumulative prospect theory.
+
+
+
+Manipulating tradeoff premiums yields weighted averages of a distortion risk and its ``dual" \cite{wang2000cdo}. Example tradeoff premiums include the two--sided VaR, a weighted average of lower and upper VaRs. The two--sided CTE is a weighted average of CTEs separately capturing lower and upper tails. The loss appetite controls the weights. This property emphasizes the two--sided nature of tradeoff premiums.
+
+
+
+Tradeoff premiums fit the description of two--sided risk measures described in \shortciteN{dhaene2003economic}: the distance between risky and risk-free positions where the risky position captures favourable and unfavourable outcomes. Subtracting the mean loss (risk-free position) from the tradeoff premium yields a loading and discount, capturing the volatility of outcomes above and below the loss appetite respectively. Therefore the difference between the tradeoff premium and the mean loss depends on the relative volatility of the two tails separated at the loss appetite. Higher upper tail volatility yields an overall positive difference and vice versa.
+
+
+
+Tradeoff premiums satisfy translation invariance, positive homogeneity and monotonicity properties of coherent risk measures \shortcite{artzner1999cmr}. In addition tradeoff premiums are additive for comonotonic random losses. Only subadditivity is not generally satisfied: the tradeoff premium of a sum of random losses may exceed the sum of individual tradeoff premiums. Tradeoff premiums are not subadditive due to their two--sided nature. Downside and upside risks have opposite impact on tradeoff premiums and both reduce upon aggregation. For right skewed loss distributions, downside risk dominates upside risk, yielding subadditive tradeoff premiums. Conversely left skewed loss distributions give rise to superadditivity.
+
+
+
+
+
+
+\section{Conclusion}\label{conclusion}
+
+
+This thesis proposes novel solutions to critical problems around measuring risk and dependence behaviour in a joint probability distribution. These problems arise from observations that risk and dependence typically vary across the distribution and hence measures of overall risk and dependence, often the focus in the literature, provide insufficient information. In addition competition is creating greater focus on upside risk in addition to downside risk, driving the need for two--sided risk measures.
+
+Proposed solutions, although novel, apply established concepts such as correlation, layers, VaR, distortion risk, and Euler allocation. These concepts are consistently applied across proposed solutions, naturally leading to an integrated and coherent quantitative risk management framework. Commonalities between proposed solutions are:
+\bi
+\i Loss outcomes are expressed in VaRs instead of absolute amounts, and modelled based on percentile ranks.
+
+\i Variables are decomposed into layers in layer dependence, mean and risk densities, and the analysis of systematic risk and diversification.
+
+\i Distortion risk is used to form risk densities, analyse systematic risk and diversification, and measure upside risk in the tradeoff premium.
+
+\ei
+Proposed solutions are explained in the next four chapters. The final chapter discusses the integration of proposed solutions, and future research areas.
+
+
+
+
+
+
+
+
+
+
+\chapter{Layer dependence}
+
+The following paper introduces, analyzes and illustrates layer dependence as a measure of local dependence.
+
+\includepdf[pages={-}]{Layerdependence.pdf}
+
+
+
+\chapter{Mean and risk density curves}
+
+The following paper introduces, analyzes and illustrates mean and risk density curves which capture mean and risk behaviour across layers of a loss.
+
+\includepdf[pages={-}]{Riskdecomposition.pdf}
+
+
+
+\chapter{Systematic risk and diversification}
+
+The following paper using risk densities to analyzes systematic risk and diversification when imperfectly dependent losses are aggregated.
+
+\includepdf[pages={-}]{Systematicrisk.pdf}
+
+
+
+\chapter{Tradeoff premiums}
+
+
+The following paper introduces the tradeoff premium which extends distortion risk measures by considering upside risk in addition to downside risk.
+
+\includepdf[pages={-}]{ToP.pdf}
+
+
+
+
+
+\chapter{Integrating proposed tools and future research areas}
+
+
+\section{Introduction}
+
+As mentioned and briefly discussed in chapter 1, proposed tools in this thesis employ consistent concepts such as VaRs, layers and distortion risks and hence combine to form a coherent quantitative risk management framework. This integration is detailed in this chapter. Future research areas to expand proposed tools are also outlined and discussed.
+
+
+\section{Integrated quantitative risk management}
+
+Consider an organisation facing multiple, dependent random losses. For example a bank may suffer credit default losses from different portfolios which may be correlated particularly during a severe economic downturn. An insurer may be exposed to losses from multiple lines of business such as motor and property which are typically unrelated except when a natural catastrophe strikes. Insurance and financial companies are typically of interest, although the same discussion applies to any scenario involving risk and dependence.
+
+Suppose the organisation aims to analyze risks arising from its losses, and manage the risks by holding capital buffers, purchasing reinsurance, hedging, exiting or expanding specific portfolios, and setting tolerance limits. Proposed tools in this thesis combine to form a consistent, holistic and coherent analytical and management framework as outlined in the following subsections. Assume either sufficient data is available or probability distributions are known. Consider a single time period such as a month or a year.
+
+
+\subsection{Calculating individual and aggregate risks}
+
+Risks values are first attached to individual and aggregate losses. Risks are calculated using distortion: the increase in expected value by moving from the original to distorted probability distribution. Distortion is an established coherent risk measurement approach as mentioned in chapter 1.
+
+Risk values provide an initial, overall indication of the riskiness and diversification\footnote{The difference between the sum of individual risks and aggregate risk.} in the portfolio. Calculated risks and diversification are subsequently analyzed and managed using proposed tools described below.
+
+
+\subsection{Analyzing risk behaviour across layers}
+
+Once individual risks are calculated, they are decomposed and spread across layers of underlying losses using risk densities proposed in chapter 3. Risk densities indicate risk contributions of each layer and are hence useful in analyzing large individual risks. For example large individual risks may arise from extreme, rare layers or low, attritional layers. Layers are expressed in VaRs, providing a ``common language" across individual loss distributions with different shape and scale. Note the analysis still assumes individual losses are ``standalone" and ignores diversification effects from aggregation.
+
+Mean densities in chapter 3 complement risk densities by indicating contributions of loss layers to mean values. Risk ratios, the ratio between risk and mean densities, indicate the risk of each loss layer relative to its mean.
+
+
+\subsection{Analyzing diversification and dependence}
+
+Analyzing diversification is important to understand the risk reduction when individual losses are aggregated. Chapter 4 constructs systematic risk densities akin to standalone risk densities, indicating post-diversification or systematic risks of layers forming individual losses. Comparing systematic with standalone risk densities reveals the extent of risk diversification in each layer and how its contribution to overall  diversification. Diversification is hence decomposed in two stages: first across individual losses, then across layers of individual losses.
+
+Chapter 4 also shows that local dependence between individual and aggregate losses drives the risk diversification in each layer, and the local dependence relates to layer dependence set up in chapter 2. Hence analyzing risk diversification is akin to analyzing dependence structures. Strong diversification arises when risky layers of individual losses are weakly dependent with the aggregate loss.
+
+
+\subsection{Formulating risk management actions}
+
+The above analysis of risk and diversification behaviour leads to actions to minimise risk or maximise diversification. For example, layers with large systematic risk are reinsured or hedged. These loss layers have large standalone risks and strong dependence with the aggregate loss, and can be identified from risk densities and layer dependence curves. Loss layers with large standalone risk but weak dependence with the aggregate loss have small contributions to aggregate risk, and hence may be retained or even expanded.
+
+Chapter 4 also discusses how the framework of mean and risk densities is used to analyse the credit rating of debt tranches, transform loss distributions using proportional and excess-of-loss reinsurance, and set capital buffers under various guiding principles. Derived actions are framed in VaRs since mean and risk densities are defined over VaR layers. VaR-based actions adjust to the shape and scale of probability distributions, and are aligned to the widespread use of VaRs in finance and insurance.
+
+
+
+\subsection{Reflecting upside risk}
+
+Finally, upside risk may be important due to competition, opportunity costs of conservatism, or limited capital available. Tradeoff premiums defined in chapter 5 extend distortion risk measurement by explicitly allowing for both upside and downside risks defined relative to a selected loss appetite. Loss appetites are defined in VaR terms, consistent with other proposed methods in this thesis.
+
+Revising risk densities in chapters 3 and 4 using two-sided distortion risk measurement, i.e. tradeoff premiums, leads to an extended quantitative risk management where upside risks are managed in conjunction with downside risks. This development is not considered in this thesis and is a future research area. Other future research areas are described in the next section.
+
+
+
+
+\section{Areas of future research}
+
+The following outlines potential areas of future research to extend proposed methods in this thesis.
+
+
+\subsection{Time series extension}
+
+It is common to model risk and dependence over multiple time periods. One such model is the Generalised Autoregressive Conditional Heteroskedasticity model with Dynamic Conditional Correlation, or GARCH--DCC (\citeN{engle2002dynamic}, \citeN{engle2001garch}). This multivariate time series model captures cyclical volatility and dependence. A period of high volatility and dependence may characterise for example turmoil in global stock markets during 2008.
+
+The proposed quantitative risk management framework in this thesis can be extended and applied across multiple time periods. Risk densities and layer dependence curves reveal risk, volatility and dependence behaviour at various points in time. Certain loss layers may be systematically risky in periods of stability, and new loss layers may emerge as being systematically most risky during turmoil. Optimal risk management actions will hence vary depending on the phase of volatility and dependence cycles.
+
+
+
+
+\subsection{Layer dependence in the multivariate case}
+
+
+Layer dependence defined in this thesis is a univariate function summarising the dependence structure of a bivariate copula, measuring dependence between a random variable and layers of another. A natural extension is hence layer dependence for multivariate copulas.
+
+Extended layer dependence may be multi-dimensional functions with one less dimension than the multivariate copula. Alternatively several univariate layer dependence curves may combine to characterise the dependence structure of the copula. Depending on the setup of extended layer dependence, one or more random variables may be decomposed into layers.
+
+
+\subsection{Fitting a copula to given layer dependence curves}
+
+One may specify layer dependence using past data and expert opinion. The next step, which is not covered in this thesis, is to fit a copula to the given dependence structure in order to compute the aggregate probability distribution and risk, for example. As mentioned in chapter 2, layer dependence curves do not imply unique copulas since the former represents summarised information whilst the latter contains complete information.
+
+A general fitting approach is to first construct a copula with controllable and flexible layer dependence. Parameters of this copula are then selected to satisfy the specified layer dependence curve. The copula may be a mixture of ``basic" copulas as building blocks. Alternatively consider the copula generated by the one-factor model \cite{krupskii2013factor}
+$$
+x=f+\epsilon_1 \quad , \quad  y=f+\epsilon_2
+$$
+where $f$, $\epsilon_1$ and $\epsilon_2$ are independent random variables. The common factor $f$ generates and controls dependence between $x$ and $y$. For example if $f$ has a highly right skewed probability distribution then large values of $x$ and $y$ are dominated by $f$ instead of $\epsilon_1$ and $\epsilon_2$, implying strong layer dependence in the upper tail. The probability distribution of $f$ can be iteratively solved to achieve the given layer dependence curve, whilst $\epsilon_1$ and $\epsilon_2$ can be standard Gaussian for example.
+
+
+
+\subsection{Two--sided risk densities}
+
+
+The previous section suggests extending the proposed quantitative risk management framework to consider upside in addition to downside risks, using tradeoff premiums. A specific extension relates to risk densities, which currently only capture downside risk. As tradeoff premiums are additive over comonotonic random variables, one can calculate the tradeoff premium for each VaR layer of a random loss which then add to the overall tradeoff premium. The resulting ``tradeoff premium density" is a two-sided risk density.
+
+
+The extension applies to both standalone and systematic risk densities. Varying the loss appetite shifts the relative focus on upside and downside risks, and a zero loss appetite leads to the original risk density.
+
+
+
+
+
+
+\appendix
+
+
+\addcontentsline{toc}{chapter}{Complete bibliography}
+
+
+
+
+\bibliography{PhD}
+
+
+\end{document}

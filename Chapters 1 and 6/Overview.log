@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.1)  1 JUN 2015 21:43
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.1)  2 JUN 2015 18:36
 entering extended mode
 **C:/Users/Admin/Documents/GitHub/PhD/Chapters*1*and*6/Overview.tex
 ("C:/Users/Admin/Documents/GitHub/PhD/Chapters 1 and 6/Overview.tex"
@@ -1586,7 +1586,7 @@ Here is how much of TeX's memory you used:
  6200 multiletter control sequences out of 15000+200000
  14001 words of font info for 54 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 39i,18n,43p,1398b,418s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,18n,43p,1398b,420s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX
@@ -1609,7 +1609,7 @@ iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmti12.pfb>
-Output written on Overview.pdf (120 pages, 6955596 bytes).
+Output written on Overview.pdf (120 pages, 6961323 bytes).
 PDF statistics:
  1202 PDF objects out of 1440 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
