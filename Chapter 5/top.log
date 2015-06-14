@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2012.8.5)  2 JUN 2015 18:30
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2012.8.5)  14 JUN 2015 14:55
 entering extended mode
 **C:/Users/Admin/Documents/GitHub/PhD/Chapter*5/top.tex
 ("C:/Users/Admin/Documents/GitHub/PhD/Chapter 5/top.tex"
@@ -138,47 +138,35 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 
 ] [2] [3] [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 179.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 182.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 179.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 182.
 File: aversionvarypi.eps Graphic file (type eps)
  <aversionvarypi.eps>
 File: CPTvarypi.eps Graphic file (type eps)
 
 <CPTvarypi.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 200--204
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 203--207
  [][] 
  []
 
-[5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15]
-Overfull \hbox (5.6671pt too wide) in paragraph at lines 506--508
-[]\OT1/cmr/m/n/10 where the last two ex-pres-sions are a weighted av-er-age of 
-two-sided expected--
- []
-
-[16] [17]
+[5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
 File: aversionvarypi.eps Graphic file (type eps)
- <aversionvarypi.eps>
+
+<aversionvarypi.eps>
 File: tradeoffbase.eps Graphic file (type eps)
  <tradeoffbase.eps>
 File: varyshape.eps Graphic file (type eps)
  <varyshape.eps>
 File: varyaversion.eps Graphic file (type eps)
-
-<varyaversion.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 551--557
+ <varyaversion.eps>
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 552--558
  [][] 
- []
-
-
-Overfull \hbox (4.3063pt too wide) in paragraph at lines 573--574
-\OT1/cmr/m/n/10 sions of the well known value--at--risk, conditional--tail--exp
-ectation and expected--
  []
 
 [18] [19] ("C:\Users\Admin\Documents\GitHub\PhD\Chapter 5\top.bbl" [20])
@@ -194,6 +182,6 @@ Here is how much of TeX's memory you used:
  4689 multiletter control sequences out of 15000+200000
  10433 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 32i,10n,34p,1157b,1826s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,10n,34p,1211b,1826s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on top.dvi (21 pages, 85400 bytes).
+Output written on top.dvi (21 pages, 85436 bytes).

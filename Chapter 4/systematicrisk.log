@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2012.8.5)  2 JUN 2015 18:31
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=latex 2012.8.5)  14 JUN 2015 14:55
 entering extended mode
 **C:/Users/Admin/Documents/GitHub/PhD/Chapter*4/systematicrisk.tex
 ("C:/Users/Admin/Documents/GitHub/PhD/Chapter 4/systematicrisk.tex"
@@ -138,36 +138,21 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 
 ]
-
-Package natbib Warning: Citation `xxx' on page  undefined on input line 133.
-
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 133.
+
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 133.
- [2]
-
-Package natbib Warning: Citation `xxx' on page  undefined on input line 142.
-
-
-Package natbib Warning: Citation `xxx' on page  undefined on input line 154.
-
-
-Package natbib Warning: Citation `xxx' on page  undefined on input line 171.
-
-[3] [4]
-
-Package natbib Warning: Citation `xxx' on page  undefined on input line 220.
-
-[5] [6]
+ [2] [3] [4] [5]
+[6]
 File: gumbel.eps Graphic file (type eps)
  <gumbel.eps>
 File: clayton.eps Graphic file (type eps)
  <clayton.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 293--297
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 297--301
  [][] 
  []
 
@@ -176,7 +161,7 @@ File: gumbelnew.eps Graphic file (type eps)
  <gumbelnew.eps>
 File: claytonnew.eps Graphic file (type eps)
  <claytonnew.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 398--402
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 402--406
  [][] 
  []
 
@@ -194,12 +179,12 @@ File: risk1.eps Graphic file (type eps)
 <risk1.eps>
 File: risk2.eps Graphic file (type eps)
  <risk2.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 448--456
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 452--460
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 30.56926pt on input line 459.
+LaTeX Warning: Float too large for page by 30.56926pt on input line 463.
 
 File: nasdaqcop.eps Graphic file (type eps)
 <nasdaqcop.eps>
@@ -214,18 +199,18 @@ File: ftsecop.eps Graphic file (type eps)
 File: ftserisk.eps Graphic file (type eps)
 
 <ftserisk.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 464--472
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 468--476
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 21.5137pt on input line 475.
+LaTeX Warning: Float too large for page by 21.5137pt on input line 479.
 
 File: aggmean.eps Graphic file (type eps)
 <aggmean.eps>
 File: aggrisk.eps Graphic file (type eps)
  <aggrisk.eps>
-Overfull \hbox (11.77202pt too wide) in paragraph at lines 480--484
+Overfull \hbox (11.77202pt too wide) in paragraph at lines 484--488
  [][] 
  []
 
@@ -234,21 +219,18 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [12] [13] [14]
 ("C:\Users\Admin\Documents\GitHub\PhD\Chapter 4\systematicrisk.bbl" [15])
-
-Package natbib Warning: There were undefined citations.
-
 [16] ("C:\Users\Admin\Documents\GitHub\PhD\Chapter 4\systematicrisk.aux") )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 1432 strings out of 493922
- 18197 string characters out of 3147306
+ 1431 strings out of 493922
+ 18192 string characters out of 3147306
  77203 words of memory out of 3000000
- 4709 multiletter control sequences out of 15000+200000
+ 4708 multiletter control sequences out of 15000+200000
  10433 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 32i,9n,34p,1155b,1809s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,9n,34p,1190b,1809s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on systematicrisk.dvi (16 pages, 69088 bytes).
+Output written on systematicrisk.dvi (16 pages, 69972 bytes).

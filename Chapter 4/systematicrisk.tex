@@ -87,7 +87,7 @@ This paper analyses and develops insights to systematic risk and diversification
 \end{abstract}
 
 \begin{keyword}
-Distortion risk; spectral risk; Euler allocation; systematic risk; diversification; layer; value-at-risk.
+Distortion risk; spectral risk; Euler allocation; systematic risk; diversification; layer; Value--at--Risk.
 \end{keyword}
 
 
@@ -109,7 +109,7 @@ This paper applies the following risk setup. Suppose $\phi\geq 0$ is an increasi
 r=\cov\{x,\phi(u)\} \cq \overline{r}=\cov\{x,\phi(u_+)\}
 \cq r_+=\cov\{x_+,\phi(u_+)\}\;,
 \end{equation}
-where $\cov$ denotes covariance and $u$ and $u_+$ are percentile ranks of $x$ and $x_+$. If $F$ and $F_+$ are distribution functions of $x$ and $x_+$ then $u\equiv F(x)$ and $u\equiv F_+(x_+)$. Standalone and systematic risks of other component losses forming $x_+$ are measured using similar covariance expressions.
+where $\cov$ denotes covariance and $u$ and $u_+$ are percentile ranks of $x$ and $x_+$. If $F$ and $F_+$ are distribution functions of $x$ and $x_+$ then $u\equiv F(x)$ and $u\equiv F_+(x_+)$. Standalone and systematic risks of other component losses forming $x_+$ are calculated using similar covariance expressions.
 
 
 The risk setup \eref{allocation} is well established in the literature. \cite{choo2009loss} refers to $r$ and $r_+$ as loss aversion risks of $x$ and $x_+$ and establishes their equivalence with distortion risks \citep{wang1996pct} and spectral risks \citep{acerbi2002spectral}. Examples of $\phi$ leading to different risk measures are discussed in \cite{choo2009loss}. In addition $\overline{r}$ is an allocation of $r_+$ to $x$ by applying the Euler principle \citep{mcneil2005qrm} or game theory \citep{tasche2007capital}. The allocation is extensively discussed in \cite{choo2010determining}, \cite{buch2008coherent} and \cite{tsanakas2006risk}.
@@ -119,18 +119,18 @@ The risk setup \eref{allocation} is coherent in the sense of \cite{artzner1999cm
 
 The term ''systematic risk" is consistent with the capital asset pricing model in finance \citep{luenberger1998is}, where the volatility or risk of an asset return is divided into diversifiable and non-diversifiable or systematic risk. Systematic risk increases with the correlation between asset and market returns, and is a key driver of risk premiums: expected asset returns above market return.
 
-This paper compares $r$, the risk of $x$ before aggregation, with $\overline{r}$, the risk of $x$ after aggregation. Since $x$ and $u_+$ are imperfectly dependent, $r\leq \overline{r}$ and the difference $r-\overline{r}$ is a diversification benefit. Diversification benefits are critical in risk management by enabling risks to be managed viably and efficiently as a group, a classic case being insurance. The systematic risk ratio is
+This paper compares $r$, the risk of $x$ before aggregation, with $\overline{r}$, the risk of $x$ after aggregation. Since $x$ and $u_+$ are imperfectly dependent, $\overline{r} \leq r$ and the difference $r-\overline{r}$ is a diversification benefit. Diversification benefits are critical in risk management by enabling risks to be managed viably and efficiently as a group, a classic case being insurance. The systematic risk ratio is
 \begin{equation}\label{ratio}
 \theta \equiv \frac{\overline{r}}{r}  = \frac{\cov\{x,\phi(u_+)\} }{\cov\{x,\phi(u)\} }
 =\frac{\cor\{x,\phi(u_+)\} }{\cor\{x,\phi(u)\} } \leq 1 \;,
 \end{equation}
-and a lower ratio indicates greater diversification. The final expression holds since $u$ and $u_+$ are both uniform hence $\phi(u)$ and $\phi(u_+)$ have equal standard deviations. Stronger dependence between $x$ and $x_+$ leads to weaker diversification due to higher numerators in \eref{ratio} hence larger $\theta$. Conversely weaker dependence leads to stronger diversification.
+where $\cor$ represents correlation. A lower systematic risk ratio indicates greater diversification. The final expression holds since $u$ and $u_+$ are both uniform hence $\phi(u)$ and $\phi(u_+)$ have equal standard deviations. Stronger dependence between $x$ and $x_+$ leads to weaker diversification due to higher numerators in \eref{ratio} hence larger $\theta$. Conversely weaker dependence leads to stronger diversification.
 
 
-Systematic risk and diversification benefit are shown to vary across the distribution of $x$ based on the local dependence structure underlying $x$ and $x_+$. This result is important when formulating risk management strategies to maximise diversification, as demonstrated by a case study using historical stock returns. The analysis focusses on $x$, however equivalent results apply to other component losses forming $x_+$.
+In this paper, systematic risk and diversification benefit are shown to vary across the distribution of $x$ based on the local dependence structure underlying $x$ and $x_+$. This result is important when formulating risk management strategies to maximise diversification, as demonstrated by a case study using historical stock returns. The analysis focusses on $x$, however equivalent results apply to other component losses forming $x_+$.
 
 
-The remaining paper is structured as follows. Section \aref{ssetup} gives an overview of mean and risk densities and Value-at-Risk (VaR) loss layers established in \cite{xxx}. Section \aref{sdensity} defines systematic risk densities analogous to standalone risk densities, and establishes links to local dependence structures underlying component and aggregate losses. Section \aref{sdecompose} uses systematic risk densities to explore drivers of systematic risk and diversification such as in financial markets. A theoretical example of the proposed analytical framework is shown in \sref{segratio}. Section \aref{ssub} attributes aggregate mean and risk densities to component losses. The attribution is important when risk management strategies target the aggregate loss. Section \aref{scomono} examines the case where component losses are comonotonic, a benchmark for measuring diversification. Section \aref{seg} concludes with an illustration of the framework using historical stock returns.
+The remaining paper is structured as follows. Section \aref{ssetup} gives an overview of mean and risk densities and Value--at--Risk (VaR) loss layers established in the second paper of this thesis (chapter 3). Section \aref{sdensity} defines systematic risk densities analogous to standalone risk densities, and establishes links to local dependence structures underlying component and aggregate losses. Section \aref{sdecompose} uses systematic risk densities to explore drivers of systematic risk and diversification such as in financial markets. A theoretical example of the proposed analytical framework is shown in \sref{segratio}. Section \aref{ssub} attributes aggregate mean and risk densities to component losses. The attribution is important when risk management strategies target the aggregate loss. Section \aref{scomono} examines the case where component losses are comonotonic, a benchmark for measuring diversification. Section \aref{seg} concludes with an illustration of the framework using historical stock returns.
 
 
 
@@ -139,7 +139,7 @@ The remaining paper is structured as follows. Section \aref{ssetup} gives an ove
 
 
 
-This section outlines VaR layers, mean and risk densities developed in \cite{xxx}. Mean and risk densities track the mean and standalone risk of a loss across its VaR layers. Risk densities are critical to the analysis of systematic risk and diversification as shown in subsequent sections.
+This section outlines VaR layers, mean and risk densities developed in chapter 3 of this thesis. Mean and risk densities track the mean and standalone risk of a loss across its VaR layers. Risk densities are critical to the analysis of systematic risk and diversification as shown in subsequent sections.
 
 The $\alpha$--Value--at--Risk (VaR$_\alpha$) of a continuous random loss $x\geq 0$ with distribution function $F$ is the percentile $V_\alpha\equiv F^-(\alpha)$, where $F^-$ is the inverse distribution function of $x$. In addition define $L_\alpha\equiv \min(x,V_\alpha)$, the loss capped at its VaR$_\alpha$. Consider the following two expressions:
 $$
@@ -151,13 +151,17 @@ $$
 $$
 where $L_\alpha'$ and $V_\alpha'$ are derivatives of $L_\alpha$ and $V_\alpha$ with respect to $\alpha$, and $I_\alpha(u)$ is an indicator equal to $1$ if $u>\alpha$ or equivalently $x>V_\alpha$, and $0$ otherwise. Hence the $V_\alpha$--layer of $x$ is an increment proportional to $V_\alpha'$ if $x>V_\alpha$ and 0 otherwise.
 
-Layers are standard insurance and financial constructs, and are also called tranches. VaR layers self-adjust to the shape and scale of the loss distribution and are hence comparable across loss distributions. Refer to \cite{xxx} for further discussion of layers and reasons for defining layers using VaRs.
+Layers are standard insurance and financial constructs, and are also called tranches in finance. VaR layers self-adjust to the shape and scale of the loss distribution and are hence comparable across loss distributions. Refer to chapter 3 for further discussion of layers and reasons for defining layers using VaRs.
 
-The risk density indicates the standalone risk of infinitesimal VaR layers of $x$ and based on \eref{allocation} is the covariance
+The risk density indicates the standalone risk of infinitesimal VaR layers of $x$, and based on \eref{allocation} is the covariance
 $$
-r_\alpha =\cov\{I_\alpha(u)V_\alpha',\phi(u)\} = \{\alpha-\Phi(\alpha)\}V_\alpha' \cq \Phi(\alpha) \equiv \int_0^\alpha \phi(u)\de u  \;,
+r_\alpha =\cov\{L_\alpha',\phi(u)\} =\cov\{I_\alpha(u)V_\alpha',\phi(u)\} = \{\alpha-\Phi(\alpha)\}V_\alpha'   \;,
 $$
-where $\Phi$ cumulates $\phi$. Integrating $r_\alpha$ yields standalone risks of larger layers:
+where 
+$$
+\Phi(\alpha) \equiv \int_0^\alpha \phi(u)\de u
+$$
+cumulates $\phi$. Integrating $r_\alpha$ yields standalone risks of larger layers:
 $$
 \int_\alpha^\beta r_\pi \de \pi = \cov \left\{\int_\alpha^\beta L_\pi'\de \pi ,\phi(u) \right\}
 = \cov\{L_\beta-L_\alpha,\phi(u)\} \;,
@@ -168,7 +172,7 @@ The mean density indicates the mean of infinitesimal VaR layers and is
 $$
 m_\alpha = \E(L_\alpha') = \E\{I_\alpha(u)V_\alpha'\} = (1-\alpha)V_\alpha' \;.
 $$
-Similar to $r_\alpha$, integrating $m_\alpha$ yields the mean of larger layers. Hence mean and risk densities are akin to probability densities: integrating yields quantities over larger regions. Refer to \cite{xxx} for further properties, illustrations and applications of mean and risk densities.
+Similar to $r_\alpha$, integrating $m_\alpha$ yields the mean of larger layers. Hence mean and risk densities are akin to probability densities: integrating yields quantities over larger regions. Refer to chapter 3 for further properties, illustrations and applications of mean and risk densities.
 
 
 
@@ -178,7 +182,7 @@ Similar to $r_\alpha$, integrating $m_\alpha$ yields the mean of larger layers. 
 \section{Systematic risk densities and links to local dependence}\label{sdensity}
 
 
-Systematic risk densities are akin to standalone risk densities in \sref{ssetup}, and describe systematic risks of infinitemisal VaR layers forming a random loss. Comparing systematic and standalone risk densities reveals the extent of diversification at various layers of the loss distribution. The comparison also leads to the dependence structure involving the aggregate loss.
+Systematic risk densities are akin to standalone risk densities in \sref{ssetup}, and describe systematic risks of infinitemisal VaR layers forming a random loss. Comparing systematic and standalone risk densities reveals the extent of diversification at various layers of the loss distribution. The comparison also leads to the dependence structure involving component and aggregate losses.
 
 
 The systematic risk density of $x$ according to \eref{allocation} is the covariance
@@ -188,7 +192,7 @@ $$
 Similar to $r_\alpha$, integrating $\overline{r}_\alpha$ yields systematic risks of larger layers and the overall systematic risk of $x$:
 $$
 \int_\alpha^\beta \overline{r}_\pi \de \pi = \cov\left\{L_\beta-L_\alpha ,\phi(u_+)\right\}
-\cq \int_0^1 \overline{r}_\alpha \de \alpha = \overline{r} \;.
+\cq \int_0^1 \overline{r}_\alpha \de \alpha = \cov\left\{L_1 ,\phi(u_+)\right\} = \overline{r} \;.
 $$
 The ratio between systematic and standalone risk densities is the proportion of remaining risk in each VaR layer after diversification, and is given by
 \begin{equation}\label{sysratio}
@@ -211,13 +215,13 @@ $$
 a partial integration of the copula $C$ weighted by the derivative $\phi'$.
 
 
-The set of $\theta_\alpha$ values over $0\le\alpha\le 1$ reflects and characterises the dependence structure of $(x,x_+)$. Given $\alpha$, $\theta_\alpha$ is the local dependence between $V_\alpha$--layer of $x$ and a function of the aggregate loss. Of interest is rank dependence since $\theta_\alpha$ is defined in terms of percentile ranks $u$ and $u_+$. If $(x,x_+)$ exhibits strong upper tail dependence and weak lower tail dependence, then $\theta_\alpha$ starts small at $\alpha=0$ and increases to one as $\alpha$ approaches one. Example systematic risk ratios given $\phi$ are discussed in \sref{segratio}.
+The set of $\theta_\alpha$ values over $0\le\alpha\le 1$ reflects and characterises the dependence structure of $(x,x_+)$. Given $\alpha$, $\theta_\alpha$ is the local dependence between $V_\alpha$--layer of $x$ and a function of the aggregate loss. Of interest is rank dependence since $\theta_\alpha$ is defined in terms of percentile ranks $u$ and $u_+$. If $(x,x_+)$ exhibits strong upper tail dependence and weak lower tail dependence, then $\theta_\alpha$ starts small at $\alpha=0$ and increases to one as $\alpha$ approaches one. An illustration of $\theta_\alpha$ given a particular $\phi$ is shown in \sref{segratio}.
 
 
 Systematic risk ratios have similar properties as linear and Spearman's correlation which are measures of overall dependence. For all $0\le\alpha\le 1$, $\theta_\alpha\le 1$, $\theta_\alpha=1$ if $u=u_+$ and $\theta_\alpha=0$ if $u$ and $u_+$ are independent. Negative dependence yields $\theta_\alpha \le 0$, and $u_+=1-u$ leads to $\theta_\alpha=-1$ if $\phi(u)$ is symmetric about $u=0.5$ such that $\phi(u-0.5)=\phi(0.5-u)$. In addition stronger correlation order \citep{dhaene2009correlation} between $x$ and $x_+$ increases $\theta_\alpha$ for all $\alpha$. Proofs are straightforward from \eref{sysratio}.
 
 
-Systemic risk ratios are similar to layer dependence \cite{xxx} which measures local dependence between arbitrary percentile rank random variables $u$ and $v$:
+Systematic risk ratios are similar to layer dependence (discussed in chapter 2 of this thesis) which measures local dependence between arbitrary uniform random variables $u$ and $v$:
 $$
 \ell_\alpha \equiv \frac{\cov\{I_\alpha(u),v\}}{\cov\{I_\alpha(u),u\}} \;.
 $$
@@ -230,7 +234,7 @@ Layer dependence $\ell_\alpha$ assumes a linear $\phi$ in systematic risk ratio 
 \section{Explaining and exploring systematic risk and diversification}\label{sdecompose}
 
 
-High overall systematic risk ratio in \eref{ratio}, or low overall diversification, arises when strong local dependence coincides with high local skewness or volatility, such as in financial markets. High systematic risk or low diversification overall may arise even when overall correlation is weak to moderate.
+High overall systematic risk ratio in \eref{ratio}, or low overall diversification, arises when strong local dependence coincides with high local skewness or volatility, such as in financial markets. High systematic risk or low diversification overall may arise even when overall correlation is weak to moderate. These intuitive concepts are formalised and explored below.
 
 
 
@@ -239,27 +243,27 @@ Noting $\overline{r}_\alpha=\theta_\alpha r_\alpha$ from \eref{sysratio}, overal
 \overline{r} = \int_0^1 r_\alpha \theta_\alpha \de \alpha
 \cq \theta = \frac{\overline{r}}{r} = \frac{\int_0^1 r_\alpha \theta_\alpha \de \alpha }{\int_0^1 r_\alpha  \de \alpha}  \;.
 \end{equation}
-Similar expressions apply when considering sytematic risk over $[V_\alpha,V_\beta]$ VaR layer of $x$: change integration limits in \eref{analysis} from $[0,1]$ to $[\alpha,\beta]$.
+Similar expressions apply when considering sytematic risk over $[V_\alpha,V_\beta]$ VaR--layer of $x$: change integration limits in \eref{analysis} from $[0,1]$ to $[\alpha,\beta]$.
 
 
-From \eref{analysis}, the overall systematic risk ratio is a risk weighted average of individual systematic risk ratios across VaR layers. As mentioned in the previous section, individual systematic risk ratios characterise the dependence structure of $(x,x_+)$. Risk weights are formed by the standalone risk density $r_\alpha=\{\alpha-\Phi(\alpha)\}V_\alpha'$, and are large for a loss distribution if $V_\alpha'$ is large. The derivative $V_\alpha'$ measures local volatility since it is the relative gap between successive VaRs. Suppose a sample of infinite size is drawn from the loss distribution and hence ordered observations are close to VaRs. Large $V_\alpha'$ implies observations around $V_\alpha$ are highly spread out, or volatile.
+From \eref{analysis}, the overall systematic risk ratio of $x$ is a ``risk weighted" average of individual systematic risk ratios across its VaR layers. As mentioned in the previous section, individual systematic risk ratios characterise the dependence structure of $(x,x_+)$. Risk weights are formed by the standalone risk density $r_\alpha=\{\alpha-\Phi(\alpha)\}V_\alpha'$, and are large for a loss distribution if $V_\alpha'$ is large. The derivative $V_\alpha'$ measures local volatility since it is the relative gap between successive VaRs. Suppose a sample of infinite size is drawn from the loss distribution and hence ordered observations are close to VaRs. Large $V_\alpha'$ implies observations around $V_\alpha$ are highly spread out, or volatile locally.
 
 
-The result in \eref{analysis} explains high systematic risk ratios and low diversification observed in financial markets, for example during the 2008 global financial crisis \citep{kolb2010lessons}, despite moderate correlations across time. From \eref{analysis}, large $\theta$ arises when strong local dependence $\theta_\alpha$ coincides with large risk weights or local volatility reflected in $r_\alpha$. Financial returns are heavy tailed (\cite{cont2001empirical}, \cite{hsieh1988statistical}) and exhibit strong tail dependence (\cite{rodriguez2007measuring}, \cite{hartmann2004asset}). The former implies large $r_\alpha$ and the latter implies large $\theta_\alpha$, both over large $\alpha$. These two implications combine to create large $\theta$, even though $\theta_\alpha$ may be small across most other smaller values of $\alpha$. Hence risk weighting of individual systematic risk ratios leads to diversification being heavily influenced by local dependence in volatile layers.
-
-
-
-Conversely diversification is strong when risks of $x$ are concentrated in layers which are weakly dependent on the aggregate loss. Large $r$ does not necessarily imply $x$ is undesirable if other component losses are structured to yield low $\theta$ and $\overline{r}$. For example suppose $x$ is heavy-tailed, such as Pareto, yielding a large standalone risk concentrated in high layers. Constructing other losses so that they have favourable values when $x$ is large leads to high layers of $x$ being weakly dependent on the aggregate loss. As a result most of the risk of $x$ is diversified upon aggregation.
+The result in \eref{analysis} explains high systematic risk ratios and low diversification observed in financial markets, for example during the 2008 global financial crisis \citep{kolb2010lessons}, despite moderate correlations across time. From \eref{analysis}, large $\theta$ arises when strong local dependence $\theta_\alpha$ coincides with large risk weights or local volatility reflected in $r_\alpha$. Financial returns are heavy tailed (\cite{cont2001empirical}, \cite{hsieh1988statistical}) and exhibit strong tail dependence (\cite{rodriguez2007measuring}, \cite{hartmann2004asset}). The former implies large $r_\alpha$ and the latter implies large $\theta_\alpha$, both over large $\alpha$. These two implications combine to create large $\theta$, even though $\theta_\alpha$ may be small across most other smaller values of $\alpha$. Hence risk weighting of individual systematic risk ratios leads to diversification being heavily influenced by local dependence in volatile or risky layers.
 
 
 
+Conversely diversification is strong when risks of $x$ are concentrated in layers which are weakly dependent on the aggregate loss. Large $r$ does not necessarily imply $x$ is undesirable if other component losses are structured to yield low $\theta$ and $\overline{r}$. For example suppose $x$ is heavy-tailed, such as Pareto, yielding a large standalone risk concentrated in high layers. Constructing other component losses so that they have favourable values when $x$ is large leads to high layers of $x$ being weakly dependent on the aggregate loss. As a result most of the risk of $x$ is diversified upon aggregation, and $x$ becomes acceptable or even desirable if it attracts a large risk premium based on its standalone risk.
 
 
 
-\section{Theoretical example using the conditional-tail-expectation}\label{segratio}
 
 
-Assume a stepped risk aversion function $\phi(u)=I_t(u)/(1-t)$ where $t$ is a parameter in the unit interval. Then according to \cite{choo2009loss} and \cite{choo2010determining},
+
+\section{Theoretical example using the conditional--tail--expectation}\label{segratio}
+
+
+Assume a stepped risk aversion function $\phi(u)=I_t(u)/(1-t)$ where $0\le t\le 1$ is a parameter. Then according to \cite{choo2009loss} and \cite{choo2010determining},
 $$
 r=\E(x|u>t)-\E(x) \cq \overline{r}=\E(x|u_+>t)-\E(x) \cq \theta=\frac{\E(x|u_+>t)-\E(x)}{\E(x|u>t)-\E(x)} \;.
 $$
@@ -276,9 +280,9 @@ $$
 $$
 where $\p$ calculates probability. Given $\alpha$, $\theta_\alpha$ increases with the probability of $u>\alpha$ jointly with, or conditional on, $u_+>t$. Other above probabilities are marginal probabilities, and are scaling factors such that $\theta_\alpha=1$ when $u=u_+$ and $\theta_\alpha=0$ when $u$ and $u_+$ are independent. In addition results are unchanged when inequalities are reversed. Therefore individual systematic risk ratios in this example reflect the likelihood of joint tail events in $x$ and $x_+$.
 
-For any $\alpha$, $\theta_\alpha=1$ implies $\p(u>\alpha|u_+>t)=\p(u>\alpha|u>t)=\min\{1,(1-\alpha)/(1-t)\}$, whilst $\theta_\alpha=0$ implies $\p(u>\alpha|u_+>t)=\p(u>\alpha)=1-\alpha$. The former  is the maximum conditional probability and the latter is the unconditional probability assuming independence locally.
+For any $\alpha$, $\theta_\alpha=1$ implies $\p(u>\alpha|u_+>t)=\p(u>\alpha|u>t)=\min\{1,(1-\alpha)/(1-t)\}$, whilst $\theta_\alpha=0$ implies $\p(u>\alpha|u_+>t)=\p(u>\alpha)=1-\alpha$. The former  is the maximum conditional tail probability and the latter is the unconditional tail probability assuming independence locally.
 
-An alternative expression for $\theta_\alpha$ in terms of the copula $C$ of $(x,x_+)$ is
+An alternative expression for $\theta_\alpha$ in terms of the copula $C$ of $(x,x_+)$ in this example is
 $$
 \theta_\alpha=\frac{C(\alpha,t)-\alpha t}{\min(\alpha,t)-\alpha t } \;.
 $$
@@ -286,7 +290,7 @@ Suppose $\theta_\alpha$ is specified for all $0\leq\alpha\leq 1$ and for all thr
 
 
 
-The panels in \fref{fsyseg} plot $\theta_\alpha$ against $\alpha$ for $t=0.5$, $0.75$ and $0.9$, assuming Gumbel and Clayton copulas for $(u,u_+)$. Apart from a kink at $\alpha=t$, $\theta_\alpha$ traces local dependence between $u$ and $u_+$, indicated by the extent of clustering along the $45^\circ$ line. For the Gumbel copula, systematic risk ratios are higher at both tails due to tail dependence, and lower in the middle. For the Clayton copula, systematic risk ratios are higher at the left tail and lower at the right tail.
+The panels in \fref{fsyseg} plot $\theta_\alpha$ against $\alpha$ for $t=0.5$, $0.75$ and $0.9$, assuming Gumbel and Clayton copulas for $(u,u_+)$. Apart from a kink at $\alpha=t$, $\theta_\alpha$ traces local dependence between $u$ and $u_+$, indicated by the extent of clustering along the $45^\circ$ line. For the Gumbel copula, systematic risk ratios are higher at both tails due to tail dependence, and lower in the middle. For the Clayton copula, systematic risk ratios are higher at the left tail and lower at the right tail, characterising lower tail dependence.
 
 \begin{figure}
   \begin{center}
@@ -294,7 +298,7 @@ The panels in \fref{fsyseg} plot $\theta_\alpha$ against $\alpha$ for $t=0.5$, $
       \resizebox{60mm}{!}{\includegraphics{gumbel.eps}}
       \resizebox{60mm}{!}{\includegraphics{clayton.eps}}
     \end{tabular}
-    \caption{Left and right panels plot $\theta_\alpha$ against $\alpha$ for Gumbel and Clayton copulas respectively. $\theta_\alpha$ is computed assuming a risk aversion function $\phi(u)=(u>t)/(1-t)$ for $t=0.5$ (red), $0.75$ (blue) and $0.9$ (green). The calculation is performed over 100 intervals of $\beta$ forming $[0,1]$. }
+    \caption{Left and right panels plot $\theta_\alpha$ against $\alpha$ for Gumbel and Clayton copulas respectively. $\theta_\alpha$ is computed assuming a risk aversion function $\phi(u)=(u>t)/(1-t)$ for $t=0.5$ (red), $0.75$ (blue) and $0.9$ (green). The calculation is performed over 100 intervals of $\alpha$ forming $[0,1]$. }
     \label{fsyseg}
   \end{center}
 \end{figure}
@@ -311,7 +315,7 @@ $$
 m_{\beta,+} = (1-\beta)V_{\beta,+}'
 \cq  r_{\beta,+} = \{\beta-\Phi(\beta)\}V_{\beta,+}'
 $$
-where $V_{\beta,+}$ is the VaR$_\beta$ of $x_+$ and $V_{\beta,+}'$ is the derivative of $V_{\beta,+}$ with respect to $\beta$. Aggregate risk reflects diversification and is therefore composed entirely of systematic risks of component losses forming $x_+$. In addition the VaR$_\beta$ layer of $x_+$ is $I_\beta(u_+)V_{\beta,+}' \de \beta$ where $u_+$ is the percentile rank of $x_+$.
+where $V_{\beta,+}$ is the VaR$_\beta$ of $x_+$ and $V_{\beta,+}'$ is the derivative of $V_{\beta,+}$ with respect to $\beta$. Aggregate risk reflects diversification and is therefore composed entirely of systematic risks of component losses forming $x_+$. In addition the VaR$_\beta$--layer of $x_+$ is $I_\beta(u_+)V_{\beta,+}' \de \beta$ where $u_+$ is the percentile rank of $x_+$.
 
 The following allocates aggregate mean and risk densities and aggregate VaR layers to component losses including $x$. The allocation is critical when risk management strategies are applied to layers of $x_+$, and the impact and cost of the strategies are attributed to component losses. Example of such strategies are stop--loss reinsurance and aggregate hedging of a portfolio of losses. The proposed allocation shown below is unbiased and aligns with the overall mean and systematic risk of component losses. The approach relies on conditional mean sharing by \cite{denuit2012convex}.
 
@@ -329,11 +333,11 @@ $$
 \dot{m}_{\beta,+} \equiv m_{\beta,+} g'(V_{\beta,+})
 \cq \dot{r}_{\beta,+} \equiv r_{\beta,+} g'(V_{\beta,+}) \;,
 $$
-where $g(x_+)=\E(x|x_+)$. Identical densities are obtained by performing ground-up calculations on $g(x_+)$ assuming $g$ is increasing and VaR$_\beta$ of $g(x_+)$ is $g(V_{\beta,+})$. Given $\beta$, $\dot{m}_{\beta,+}$ and $\dot{r}_{\beta,+}$ are portions of the mean and risk of VaR$_\beta$ layer of $x_+$ attributable to $x$.
+where $g(x_+)=\E(x|x_+)$. Identical densities are obtained by performing ground-up calculations on $g(x_+)$ assuming $g$ is increasing and VaR$_\beta$ of $g(x_+)$ is $g(V_{\beta,+})$. Given $\beta$, $\dot{m}_{\beta,+}$ and $\dot{r}_{\beta,+}$ are portions of the mean and risk of VaR$_\beta$--layer of $x_+$ attributable to $x$.
 
 
 
-Sub-aggregate mean and risk densities of $x$ are aligned to the overall mean and systematic risk of $x$. Integrating $\dot{m}_{\beta,+}$ over all $\beta$ yields
+Sub-aggregate mean and risk densities of $x$ are aligned with the overall mean and systematic risk of $x$. Integrating $\dot{m}_{\beta,+}$ over all $\beta$ yields
 $$
 \int_0^1 \dot{m}_{\beta,+} \de \beta = \int_0^1 (1-\beta) \{g(V_{\beta,+})\}' \de\beta
 = \E\{g(x_+)\} = \E(x) \;,
@@ -371,7 +375,7 @@ implying $\theta_\alpha=1$. In addition $\overline{r}=r$ and $\theta=1$. This re
 $$
 \dot{m}_{\beta,+}  = m_\beta \cq \dot{r}_{\beta,+} =r_\beta\;.
 $$
-Since comonotonic $x_+$ and $x$ reach their VaR$_\beta$ layers simultaneously, the attributed mean and risk of the VaR$_\beta$ layer of $x_+$ to $x$ is the mean and risk of the VaR$_\beta$ layer of $x$.
+Since comonotonic $x_+$ and $x$ reach their VaR$_\beta$--layers simultaneously, the attributed mean and risk of the VaR$_\beta$--layer of $x_+$ to $x$ is the mean and risk (systematic or standalone) of the VaR$_\beta$--layer of $x$.
 
 
 \ei
@@ -384,10 +388,10 @@ $$
 = \frac{\frac{\de}{\de\beta}\E(x|u_+=\beta)}{\frac{\de}{\de\beta}\E(x|u=\beta)}
 =\frac{\cov\left\{x,\frac{\de}{\de\beta}\delta_\beta(u_+) \right\}}{\cov\left\{x,\frac{\de}{\de\beta}\delta_\beta(u) \right\}}    \;.
 \end{equation}
-where $\delta_\beta(u)$ is the Dirac delta function which approaches $\infty$ when $u=\beta$ and is 0 otherwise. Similar to $\theta_\alpha$, $\gamma_\beta=1$ if $u=u_+$ and $\gamma_\beta=0$ if $u$ and $u_+$ are independent. Unlike $\theta_\alpha$, $\gamma_\beta$ is computed entirely from the joint distribution of $(x,x_+)$ and does not involve the risk aversion function $\phi$. In addition $\gamma_\beta$ may exceed one since the numerator in its definition relates to the VaR$_\beta$ layer of $x_+$ whereas the denominator relates to the VaR$_\beta$ layer of $x$ and there is no strict inequality between the two.
+where $\delta_\beta(u)$ is the Dirac delta function which approaches $\infty$ when $u=\beta$ and is 0 otherwise. Similar to $\theta_\alpha$, $\gamma_\beta=1$ if $u=u_+$ and $\gamma_\beta=0$ if $u$ and $u_+$ are independent. Unlike $\theta_\alpha$, $\gamma_\beta$ is computed entirely from the joint distribution of $(x,x_+)$ and does not involve the risk aversion function $\phi$. In addition $\gamma_\beta$ may exceed one since the numerator in its definition relates to the VaR$_\beta$--layer of $x_+$ whereas the denominator relates to the VaR$_\beta$--layer of $x$ and there is no strict inequality between numerator and denominator.
 
 
-As per $\theta_\alpha$, $\gamma_\beta$ measures local dependence between $x$ and $x_+$ but in a different manner. The second last expression in \eref{allratio} measures the sensitivity in the conditional expectation of $x$ to changes in $x_+$ at VaR$_\beta$, relative to the same calculation when $u=u_+$. The last expression in \eref{allratio} computes the covariance between $x$ and a function of $u_+$, again relative to the comonotonic case.
+As per $\theta_\alpha$, $\gamma_\beta$ measures local dependence between $x$ and $x_+$ but in a different manner. The second last expression in \eref{allratio} measures the sensitivity of the conditional expectation of $x$ to changes in $x_+$ at VaR$_\beta$, relative to the same calculation when $u=u_+$. The last expression in \eref{allratio} computes the covariance between $x$ and a function of $u_+$, again relative to the comonotonic case.
 
 
 
@@ -416,7 +420,7 @@ Top four panels in \fref{fcase1} display empirical marginal probability distribu
 Bottom two panels in \fref{fcase1} graph standalone and systematic risk densities for each market index, calculated from the empirical joint probability distribution. Density values are smoothed to reduce volatility across VaR layers. Before aggregation, NASDAQ has the highest risk density due to greater skewness of its probability distribution. S\&P and FTSE have similar risk densities, although S\&P has a slightly lower density in middle VaR layers due to greater peakedness of its probability density. All three risk densities are reduced after diversification, most notably FTSE. Subsequent figures compare and analyse standalone and systematic risk densities.
 
 
-\fref{fcase2} compares standalone and systematic risk densities for each market index. Systematic risk ratios, and copulas between index and aggregate losses, are also shown. Note from \sref{sdensity} that systematic risk ratios are computed entirely from the copulas and summarise the dependence structure. Also note the kink in systematic risk ratios at VaR$_{0.75}$ layers due to the selection of the risk aversion function. FTSE has lower systematic risk ratios than NASDAQ and S\&P across all VaR layers due to its weaker dependence with the aggregate loss. Hence FTSE experiences stronger diversification. All three market indices have systematic risk ratios close to 1 in extreme VaR layers, due to tail dependence. Therefore there is minimal risk diversification in extreme VaR layers of all three indices.
+\fref{fcase2} compares standalone and systematic risk densities for each market index. Systematic risk ratios, and copulas between index and aggregate losses, are also shown. Note from \sref{sdensity} that systematic risk ratios are computed entirely from the copulas and summarise the dependence structure. Also note the kink in systematic risk ratios at VaR$_{0.75}$--layers due to the selection of the risk aversion function. FTSE has lower systematic risk ratios than NASDAQ and S\&P across all VaR layers due to its weaker dependence with the aggregate loss. Hence FTSE experiences stronger diversification. All three market indices have systematic risk ratios close to 1 in extreme VaR layers, due to tail dependence. Therefore there is minimal risk diversification in extreme VaR layers of all three indices.
 
 Table 1 shows overall risks for each market index, before and after diversification. Overall systematic risk ratios are also shown. As expected NASDAQ has the highest standalone and systematic risk. S\&P and FTSE have similar standalone risks, although FTSE has higher diversification and therefore lower systematic risk. NASDAQ and S\&P have similar overall systematic risk ratios.
 

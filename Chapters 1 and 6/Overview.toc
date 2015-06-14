@@ -15,26 +15,26 @@
 \contentsline {subsection}{\numberline {1.7.1}Concepts of systematic risk and diversification}{17}
 \contentsline {subsection}{\numberline {1.7.2}Current approaches to analyse systematic risk and diversification}{18}
 \contentsline {subsection}{\numberline {1.7.3}Proposed analytical framework for systematic risk and diversification}{19}
-\contentsline {section}{\numberline {1.8}Taking a balanced view of risk}{21}
+\contentsline {section}{\numberline {1.8}Forming balanced views of risk}{21}
 \contentsline {subsection}{\numberline {1.8.1}Two--sided versus one--sided risk measurement}{21}
 \contentsline {subsection}{\numberline {1.8.2}Current risk measurement approaches}{22}
-\contentsline {subsection}{\numberline {1.8.3}Tradeoff premium as a two-sided risk measure}{23}
+\contentsline {subsection}{\numberline {1.8.3}Tradeoff premiums as two--sided risk measures}{23}
 \contentsline {section}{\numberline {1.9}Conclusion}{24}
-\contentsline {chapter}{\numberline {2}Layer dependence}{25}
-\contentsline {chapter}{\numberline {3}Mean and risk density curves}{46}
-\contentsline {chapter}{\numberline {4}Systematic risk and diversification}{70}
-\contentsline {chapter}{\numberline {5}Tradeoff premiums}{87}
-\contentsline {chapter}{\numberline {6}Integrating proposed tools and future research areas}{109}
-\contentsline {section}{\numberline {6.1}Introduction}{109}
-\contentsline {section}{\numberline {6.2}Integrated quantitative risk management}{109}
-\contentsline {subsection}{\numberline {6.2.1}Calculating individual and aggregate risks}{110}
-\contentsline {subsection}{\numberline {6.2.2}Analyzing risk behaviour across layers}{110}
-\contentsline {subsection}{\numberline {6.2.3}Analyzing diversification and dependence}{110}
-\contentsline {subsection}{\numberline {6.2.4}Formulating risk management actions}{111}
-\contentsline {subsection}{\numberline {6.2.5}Reflecting upside risk}{111}
-\contentsline {section}{\numberline {6.3}Areas of future research}{112}
-\contentsline {subsection}{\numberline {6.3.1}Time series extension}{112}
-\contentsline {subsection}{\numberline {6.3.2}Layer dependence in the multivariate case}{112}
-\contentsline {subsection}{\numberline {6.3.3}Fitting a copula to given layer dependence curves}{112}
-\contentsline {subsection}{\numberline {6.3.4}Two--sided risk densities}{113}
-\contentsline {chapter}{Complete bibliography}{113}
+\contentsline {chapter}{\numberline {2}Layer dependence}{26}
+\contentsline {chapter}{\numberline {3}Mean and risk densities}{47}
+\contentsline {chapter}{\numberline {4}Analyzing systematic risk and diversification}{72}
+\contentsline {chapter}{\numberline {5}Tradeoff premiums}{89}
+\contentsline {chapter}{\numberline {6}Integrating proposed tools and future research areas}{111}
+\contentsline {section}{\numberline {6.1}Introduction}{111}
+\contentsline {section}{\numberline {6.2}Integrated quantitative risk management}{111}
+\contentsline {subsection}{\numberline {6.2.1}Calculating individual and aggregate risks}{112}
+\contentsline {subsection}{\numberline {6.2.2}Analyzing risk behaviour across layers}{112}
+\contentsline {subsection}{\numberline {6.2.3}Analyzing diversification and dependence}{112}
+\contentsline {subsection}{\numberline {6.2.4}Formulating risk management actions}{113}
+\contentsline {subsection}{\numberline {6.2.5}Reflecting upside risk}{113}
+\contentsline {section}{\numberline {6.3}Areas of future research}{114}
+\contentsline {subsection}{\numberline {6.3.1}Time series extension}{114}
+\contentsline {subsection}{\numberline {6.3.2}Layer dependence in the multivariate case}{114}
+\contentsline {subsection}{\numberline {6.3.3}Fitting a copula to given layer dependence curves}{115}
+\contentsline {subsection}{\numberline {6.3.4}Two--sided risk densities}{115}
+\contentsline {chapter}{Complete bibliography}{115}
