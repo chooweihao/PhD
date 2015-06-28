@@ -1,5 +1,7 @@
 \documentclass[authoryear]{elsarticle}
 
+\pagenumbering{gobble}
+
 
 \makeatletter
 \def\ps@pprintTitle{%
@@ -730,7 +732,7 @@ where $F\equiv V^-$ and $G$ are distribution functions of observed random variab
       \resizebox{60mm}{!}{\includegraphics{weights.eps}}
       \resizebox{60mm}{!}{\includegraphics{alternate.eps}} \\
     \end{tabular}
-    \caption{The left panel shows the weight functions $w_\alpha=6\alpha(1-\alpha)$ (black), $w_\alpha=1$ (blue), $w_\alpha=3\alpha^2$ (green), $w_\alpha=3(1-\alpha)^2$ (yellow). The right panel shows a Clayton copula with a red layer dependence curve and overall dependence measures $\rho$, $\rho_1$, $\rho_2$ and $\rho_3$ indicated using the same colors as corresponding weight functions in the left panel.  }
+    \caption{The left panel shows the weight functions $w_\alpha=6\alpha(1-\alpha)$ (black), $w_\alpha=1$ (blue), $w_\alpha=3\alpha^2$ (green), $w_\alpha=3(1-\alpha)^2$ (yellow). The right panel shows a Clayton copula with a red layer dependence curve and overall dependence measures $\rho$, $\rho_1$, $\rho_2$ and $\rho_3$ indicated using the same colors as corresponding weight functions in the left panel. Note the weight function $w_\alpha=3(1-\alpha)^2$ delivers the highest overall dependence for the Clayton copula due to its emphasis on lower tail dependence. The weight function $w_\alpha=3\alpha^2$ delivers the lowest overall dependence  }
     \label{falternate}
   \end{center}
 \end{figure}

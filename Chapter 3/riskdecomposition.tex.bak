@@ -775,22 +775,34 @@ and the corresponding mean and risk densities are, respectively,
 \end{equation}
 Risk ratios are unchanged after reinsurance: $\tilde{r}_\alpha/\tilde{m}_\alpha=r_\alpha/m_\alpha$. The loss distribution is altered by reinsurance and is further discussed below.
 
-The set of values of $t_\alpha$ over $0\le \alpha\le 1$ defines the ``reinsurance structure." Typical reinsurance structures are ``quota share": $t_\alpha=t$ and ``excess--of--loss": $t_\alpha=I_d(\alpha)$. Quota share covers a constant proportion $t$ of all layers. Excess--of--loss covers all VaR--layers above $d$. A combination of quota share and excess--of--loss can also be applied to deliver a desired loss distribution as shown in the example below.
+The set of values of $t_\alpha$ over $0\le \alpha\le 1$ defines the ``reinsurance structure." Typical reinsurance structures are ``quota share": $t_\alpha=t$ and ``excess--of--loss": $t_\alpha=I_d(\alpha)$. Quota share covers a constant proportion $t$ of all layers. Excess--of--loss covers all VaR--layers above $d$. A combination of quota share and excess--of--loss reinsurance can also be applied to deliver a desired loss distribution as shown in the example at the end of this section.
 
-The VaR$_\alpha$--spacing after reinsurance is $\tilde{V}_\alpha'=(1-t_\alpha)V_\alpha'$. Therefore integrate this expression to construct the VaR$_\alpha$ of the retained loss:
+The overall risk ratio after reinsurance is
+$$
+\frac{\int_0^1 \tilde{r}_\alpha \de \alpha}{\int_0^1 \tilde{m}_\alpha \de \alpha}
+=\frac{\int_0^1 (1-t_\alpha) m_\alpha r_\alpha^* \de \alpha}{\int_0^1 (1-t_\alpha) m_\alpha \de \alpha} \cq r_\alpha^*=\frac{r_\alpha}{m_\alpha} \;.
+$$
+Compare the overall risk ratio after reinsurance with the same prior to reinsurance in \eref{riskratio}. To reduce the overall risk ratio, reinsure high VaR layers with high $r_\alpha^*$, particularly if $m_\alpha$ is high. This observation implies excess--of--loss is more risk effective than quota share. Quota share maintains the overall risk ratio since $t_\alpha=t$ for all $\alpha$, whereas the overall risk ratio with excess--of--loss is
+$$
+\frac{\int_0^d r_\alpha \de \alpha}{\int_0^d m_\alpha \de \alpha}
+=\frac{\int_0^d m_\alpha r_\alpha^* \de \alpha}{\int_0^d m_\alpha \de \alpha} \;,
+$$
+a weighted average of risk ratios up to the $V_d$--layer.
+
+The VaR$_\alpha$--spacing after reinsurance is $\tilde{V}_\alpha'\equiv(1-t_\alpha)V_\alpha'$. Therefore integrate this expression to construct the VaR$_\alpha$ of the retained loss:
 $$
 \tilde{V}_\alpha = \int_0^\alpha (1-t_s) V_s' \de s = (1-t_\alpha) V_\alpha +\int_0^\alpha V_s t_s' \de s \;,
 $$
-where the second expression follows from integration by parts. For quota share, $t_\alpha'=0$ therefore $\tilde{V}_\alpha=(1-t)V_\alpha$. Losses reduce by a portion $t$. For excess-of-loss, $t_\alpha'=(\alpha=d)$, the Dirac delta function, and $\tilde{V}_\alpha=\{1-I_d(\alpha)\}V_\alpha + I_d(\alpha)V_d$. Hence all losses below $V_d$ are retained and losses above $V_d$ are capped at $V_d$, implying the retained loss is the VaR--layer $[0,V_d]$ of $x$.
+where the second expression follows from integration by parts. For quota share, $t_\alpha'=0$ therefore $\tilde{V}_\alpha=(1-t)V_\alpha$. Losses reduce by a portion $t$. For excess--of--loss, $t_\alpha'=(\alpha=d)$, the Dirac delta function, and $\tilde{V}_\alpha=\{1-I_d(\alpha)\}V_\alpha + I_d(\alpha)V_d$. Hence all losses below $V_d$ are retained and losses above $V_d$ are capped at $V_d$, implying the retained loss is the VaR--layer $[0,V_d]$ of $x$.
 
-The following constructs a reinsurance structure to yield a target probability, mean or risk profile of the retained loss. If the target mean density is $\tilde{m}_\alpha$ then from \eref{reinsurance} the reinsurance structure is $t_\alpha=1-\tilde{m}_\alpha/m_\alpha$. Similarly for a target risk density. If the target loss distribution has VaR$_\alpha$ $\tilde{V}_\alpha$ then $t_\alpha=1-\tilde{V}_\alpha'/V_\alpha'$. In all cases the reinsurance structure computes the ratio between target and original quantities.
+The following forms a reinsurance structure to deliver a desired probability, mean or risk profile of the retained loss. If the desired mean density is $\tilde{m}_\alpha$ then from \eref{reinsurance} the reinsurance structure is $t_\alpha=1-\tilde{m}_\alpha/m_\alpha$. Similarly for a desired risk density. If the desired loss distribution has VaR$_\alpha$ $\tilde{V}_\alpha$ then $t_\alpha=1-\tilde{V}_\alpha'/V_\alpha'$. In all cases the reinsurance structure computes the ratio between desired and original quantities.
 
 Consider a Pareto loss distribution with shape parameter $\gamma>1$ and scale parameter $b>0$. A reinsurance structure is required to transform the loss distribution into an exponential with scale $\tilde{b}>0$. The reinsurance structure is
 $$
 t_\alpha = 1-\tilde{V}_\alpha'/V_\alpha' = 1-  \frac{\tilde{b}(1-\alpha)^{-1} }{b\gamma^{-1}(1-\alpha)^{-(1/\gamma+1)}}
-= 1-\tilde{b}b^{-1}\gamma (1-\alpha)^{1/\gamma}
+= 1-\tilde{b}b^{-1}\gamma (1-\alpha)^{1/\gamma}  \;.
 $$
-Hence reinsurance is $1-\tilde{b}b^{-1}\gamma$ at the zero VaR layer, and increases monotonically to $1$ at the highest VaR layer. This result is intuitive since the Pareto is thicker tailed than the exponential. Hence in order to transform the loss from Pareto to exponential, minimum reinsurance is required for small losses, and larger losses are increasingly reinsured. Note $\tilde{b}\le b/\gamma$ since $0\le t_\alpha\le 1$ for all $\alpha$.
+The reinsured portion is $1-\tilde{b}b^{-1}\gamma$ at the zero VaR layer, and increases monotonically to $1$ at the highest VaR layer. This result is intuitive since the Pareto is thicker tailed than the exponential. Hence in order to transform the loss from Pareto to exponential, minimum reinsurance is required for small losses, and larger losses are increasingly reinsured. Note $\tilde{b}\le b/\gamma$ since $0\le t_\alpha\le 1$ for all $\alpha$.
 
 
 \begin{comment}
@@ -867,6 +879,9 @@ This paper develops a framework to analyze mean and risk contributions by VaR--l
 Applying mean and risk densities yields insights to common risk management problems involving capital, reinsurance and derivatives.
 
 \newpage
+
+
+\section*{References}
 
 \bibliography{PhD}
 

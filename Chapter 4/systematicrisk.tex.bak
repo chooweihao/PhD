@@ -157,7 +157,7 @@ The risk density indicates the standalone risk of infinitesimal VaR layers of $x
 $$
 r_\alpha =\cov\{L_\alpha',\phi(u)\} =\cov\{I_\alpha(u)V_\alpha',\phi(u)\} = \{\alpha-\Phi(\alpha)\}V_\alpha'   \;,
 $$
-where 
+where
 $$
 \Phi(\alpha) \equiv \int_0^\alpha \phi(u)\de u
 $$
@@ -515,6 +515,9 @@ Figures \aref{fcase1}, \aref{fcase2} and \aref{fcase3} guide the formulation of 
 
 
 \newpage
+
+\section*{References}
+
 
 \bibliography{PhD}
 

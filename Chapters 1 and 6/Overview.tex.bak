@@ -20,8 +20,8 @@
 \newcommand{\ei}{\end{itemize}}
 
 
-\title{Novels tools in quantitative risk management}
-\author{Weihao Choo \\ \\ Department of Applied Finance and Actuarial Studies \\ Macquarie University \\ \\ PhD submission \\ \\ 2015}
+\title{Novel risk and dependence tools in quantitative risk management}
+\author{Weihao Choo \\ \\ Department of Applied Finance and Actuarial Studies \\ Macquarie University \\ \\ PhD submission -- publication format\\ \\ 2015}
 \date{}
 
 
@@ -449,7 +449,7 @@ This thesis also allocates mean and risk densities of the aggregate loss to comp
 
 
 
-\section{Taking a balanced view of risk}\label{balanced}
+\section{Forming balanced views of risk}\label{balanced}
 
 
 \subsection{Two--sided versus one--sided risk measurement}
@@ -505,30 +505,30 @@ In the above examples there is always a one--sided focus on larger loss outcomes
 
 
 
-\subsection{Tradeoff premium as a two--sided risk measure}
+\subsection{Tradeoff premiums as two--sided risk measures}
 
 
 This thesis proposes ``tradeoff premiums" which are two--sided extensions of one--sided distortion risk measures. Upside and downside risks are explicitly captured and a ``loss appetite" controls their relative importance. Close links are established with subjective probability in cumulative prospect theory.
 
 
 
-Tradeoff premiums are weighted averages of loss outcomes expressed in VaRs, where weights are U--shaped. Weights are increasing for one--sided distortion risks, loss aversion reserves or spectral risks discussed in the previous subsection. With tradeoff premiums, weights are decreasing up to an exogenous loss appetite, and increase thereafter. U--shaped weights stress the importance of ``large" \textit{and} ``small" loss outcomes defined relative to loss appetite, respectively representing downside and upside risk. A low loss appetite implies weights are mostly increasing and generates a conservative premium dominated by downside risk. On the other hand a high loss appetite creates mostly decreasing weights and an aggressive premium with greater focus on upside risk and less on downside risk.
+Tradeoff premiums are weighted averages of loss outcomes expressed in VaRs. Weights are U--shaped. For one--sided distortion risks, loss aversion reserves or spectral risks discussed in the previous subsection, weights are increasing to reflect the importance of larger loss outcomes. With tradeoff premiums, weights decrease up to an exogenous ``loss appetite,'' and increase thereafter. U--shaped weights stress the importance of larger \textit{and} smaller loss outcomes, respectively representing downside and upside risk. A low loss appetite implies weights are mostly increasing and generates a conservative premium dominated by downside risk. On the other hand a high loss appetite creates mostly decreasing weights and an aggressive premium with greater focus on upside and less on downside.
 
 
 
-Cumulative prospect theory \cite{tversky1992apt} supports a U--shaped weight function: over--weighting extreme, unlikely outcomes and under--weighting average, likely outcomes. Further S--shaped distortion operators are implied from tradeoff premiums, consistent with probability adjustment in cumulative prospect theory.
+Cumulative prospect theory \cite{tversky1992apt} supports a U--shaped weight function: over--weighting extreme, unlikely outcomes and under--weighting average, likely outcomes. Further S--shaped distortion operators are implied from tradeoff premiums, consistent with probability adjustment functions described in cumulative prospect theory.
 
 
 
-Manipulating tradeoff premiums yields weighted averages of a distortion risk and its ``dual" \cite{wang2000cdo}. This property emphasizes the two--sided nature of tradeoff premiums. Example tradeoff premiums include the two--sided VaR, a weighted average of lower and upper VaRs. The two--sided CTE is a weighted average of CTEs separately capturing lower and upper tails. In all cases the loss appetite controls the weights placed on downside and upside.
+Manipulating tradeoff premiums yields weighted averages of a distortion risk, capturing downside risk, and its ``dual"  \cite{wang2000cdo}, capturing upside risk. This property emphasizes the two--sided nature of tradeoff premiums. An example tradeoff premium is the two--sided VaR, a weighted average of lower and upper VaRs. The two--sided CTE is a weighted average of two CTEs separately capturing lower and upper tails. In all cases the loss appetite specifies the weights placed on downside and upside risks.
 
 
 
-Tradeoff premiums fit the description of two--sided risk measures described in \shortciteN{dhaene2003economic}: the distance between risky and risk-free positions where the risky position captures favourable and unfavourable outcomes. Subtracting the mean loss (risk-free position) from the tradeoff premium yields a loading and discount, capturing the volatility of outcomes above and below the loss appetite respectively. Therefore the difference between the tradeoff premium and the mean loss depends on the relative volatility of the two tails separated at the loss appetite. Higher upper tail volatility yields an overall positive difference and vice versa.
+Tradeoff premiums match the description of two--sided risk measures described in \shortciteN{dhaene2003economic}: the distance between risky and risk-free positions where the risky position captures favourable and unfavourable outcomes. Subtracting the mean loss (risk-free position) from the tradeoff premium (risky position) yields the combination of a loading and discount. The loading and discount capture the volatility of losses above and below the loss appetite respectively. Therefore the difference between the tradeoff premium and the mean loss depends on the relative volatility of the two tails separated at the loss appetite. Higher upper tail volatility yields an overall positive difference and vice versa.
 
 
 
-Tradeoff premiums satisfy translation invariance, positive homogeneity and monotonicity properties of coherent risk measures \shortcite{artzner1999cmr}. In addition tradeoff premiums are additive for comonotonic random losses. Only subadditivity is not generally satisfied: the tradeoff premium of a sum of random losses may exceed the sum of individual tradeoff premiums. Tradeoff premiums are not subadditive due to their two--sided nature. Downside and upside risks have opposite impact on tradeoff premiums and both reduce upon aggregation. For right skewed loss distributions, downside risk dominates upside risk, yielding subadditive tradeoff premiums. Conversely left skewed loss distributions give rise to superadditivity.
+Tradeoff premiums satisfy translation invariance, positive homogeneity and monotonicity properties of coherent risk measures \shortcite{artzner1999cmr}. In addition tradeoff premiums are additive for comonotonic random losses. Only subadditivity is not generally satisfied: the tradeoff premium of a sum of random losses may exceed the sum of individual tradeoff premiums. Tradeoff premiums are not subadditive due to their two--sided nature. Downside and upside risks have opposite impact on tradeoff premiums and both reduce or ``diversify" upon aggregation. For right skewed loss distributions or low loss appetite, downside risk dominates upside risk, yielding subadditive tradeoff premiums. Conversely left skewed loss distributions or high loss appetite give rise to superadditivity.
 
 
 
@@ -549,7 +549,7 @@ Proposed solutions, although novel, apply established concepts such as correlati
 \i Distortion risk is used to form risk densities, analyse systematic risk and diversification, and measure upside and downside risks in the tradeoff premium.
 
 \ei
-Proposed solutions are explained in the next four chapters. The final chapter discusses the integration of proposed solutions, and future research areas.
+Proposed solutions are explained in the next four chapters. The final chapter discusses the integration of proposed solutions, and outlines potential future research areas.
 
 
 
@@ -578,7 +578,7 @@ The following paper introduces, analyzes and illustrates mean and risk densities
 
 \chapter{Analyzing systematic risk and diversification}
 
-The following paper applies risk densities to analyzes systematic risk and diversification when imperfectly dependent losses are aggregated.
+The following paper applies risk densities to analyze systematic risk and diversification when imperfectly dependent losses are aggregated.
 
 \includepdf[pages={-},pagecommand={}]{Systematicrisk.pdf}
 
